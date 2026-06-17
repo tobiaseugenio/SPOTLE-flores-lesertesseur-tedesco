@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cwpn2rff8hylo"]
+
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_haamj"]
+[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_7moql"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rom4x"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oveco"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnrrv"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=67743405]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1398758490]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rom4x")
+
+[node name="Label" type="Label" parent="." unique_id=1798005231]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 181.0
+offset_right = 1153.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("1_haamj")
+theme_override_font_sizes/font_size = 150
+text = "MUVIE"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1440585307]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.5
+offset_top = 29.5
+offset_right = 96.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_7moql")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_oveco")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vnrrv")
+text = "start game"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3iee6jc5oetj"]
+
+[ext_resource type="Texture2D" uid="uid://bvlvhylg2wvg" path="res://icon.svg" id="1_rfmnd"]
+
+[node name="player1" type="Node2D" unique_id=880289305]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=57152772]
+scale = Vector2(0.71875, 0.6796875)
+texture = ExtResource("1_rfmnd")
+
+[node name="sonidoAvanzar" type="AudioStreamPlayer2D" parent="." unique_id=404000305]

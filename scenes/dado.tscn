@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://clrpx4ekwrk5f"]
+
+[ext_resource type="Texture2D" uid="uid://i51r5sri25h2" path="res://ui/assets/dado.png" id="1_nntwd"]
+[ext_resource type="Script" uid="uid://dhdfhd8a65057" path="res://scripts/dado.gd" id="1_tbv0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tbv0i"]
+size = Vector2(33, 32)
+
+[node name="dado" type="Area2D" unique_id=269272119]
+position = Vector2(0, 1)
+script = ExtResource("1_tbv0i")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=857812524]
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+
+[node name="Label" type="Label" parent="ColorRect" unique_id=1997604536]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "1"
+horizontal_alignment = 1
+
+[node name="spriteDado" type="Sprite2D" parent="." unique_id=995884713]
+position = Vector2(-7.6293945e-06, -1)
+scale = Vector2(0.12708335, 0.1201389)
+texture = ExtResource("1_nntwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=603281959]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_tbv0i")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -14,6 +14,10 @@ config/name="spotle"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_height=672
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

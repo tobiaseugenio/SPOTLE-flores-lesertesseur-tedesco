@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://s12yepamm2wo"]
+
+[ext_resource type="Script" uid="uid://cjtjr8h85qwm1" path="res://scripts/selector_artista.gd" id="1_f0h64"]
+
+[node name="Spotle" type="Node2D" unique_id=1655091085]
+
+[node name="selectorArtista" type="Node" parent="." unique_id=1356821162]
+script = ExtResource("1_f0h64")

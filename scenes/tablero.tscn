@@ -207,7 +207,7 @@ sources/0 = SubResource("TileSetAtlasSource_15a0m")
 
 [sub_resource type="Curve2D" id="Curve2D_afy4m"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 65, 528, 0, 0, 0, 0, 1069, 524, 0, 0, 0, 0, 1064, 333, 0, 0, 0, 0, 67, 338, 0, 0, 0, 0, 71, 127, 0, 0, 0, 0, 962, 139)
+"points": PackedVector2Array(0, 0, 0, 0, 63.959618, 535.29236, 0, 0, 0, 0, 1076.2578, 535.29236, 0, 0, 0, 0, 1076.2578, 327.9791, 0, 0, 0, 0, 63.959625, 329.02087, 0, 0, 0, 0, 65, 128.99998, 0, 0, 0, 0, 963.07654, 128.99998)
 }
 point_count = 6
 
@@ -219,18 +219,18 @@ tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAAAAAEAAAABAAEAAAAAAAIAAAABAAE
 tile_set = SubResource("TileSet_ee34m")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=233549036]
+position = Vector2(16.776068, 20.537926)
+scale = Vector2(0.95722795, 0.9648224)
 curve = SubResource("Curve2D_afy4m")
 
 [node name="PathFollow2D-P1" type="PathFollow2D" parent="Path2D" unique_id=1068612557]
-position = Vector2(65, 528)
-rotation = -0.0039840434
+position = Vector2(63.959618, 535.29236)
 
 [node name="player1" parent="Path2D/PathFollow2D-P1" unique_id=880289305 instance=ExtResource("3_wnuxq")]
 position = Vector2(12.003889, -0.95218366)
 
 [node name="PathFollow2D-P2" type="PathFollow2D" parent="Path2D" unique_id=273673007]
-position = Vector2(65, 528)
-rotation = -0.0039840434
+position = Vector2(63.959618, 535.29236)
 
 [node name="dado" parent="." unique_id=269272119 instance=ExtResource("4_4sva1")]
 position = Vector2(71, 436)

@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cwpn2rff8hylo"]
 
+[ext_resource type="Script" uid="uid://cc6vh81nttjwa" path="res://scripts/menu_principal.gd" id="1_7moql"]
 [ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_haamj"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_7moql"]
 
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_7moql")
 
 [node name="Panel" type="Panel" parent="." unique_id=1398758490]
 layout_mode = 1
@@ -42,7 +44,7 @@ theme_override_font_sizes/font_size = 150
 text = "MUVIE"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1440585307]
+[node name="ButtonStart" type="Button" parent="." unique_id=1440585307]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -62,3 +64,5 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_oveco")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vnrrv")
 text = "start game"
+
+[connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]

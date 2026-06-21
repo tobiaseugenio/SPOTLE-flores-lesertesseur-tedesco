@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://breh24q6uy01v"]
+
+[ext_resource type="PackedScene" uid="uid://bvaxf3fmctdcr" path="res://scenes/cuadrado_info.tscn" id="1_e5fvt"]
+[ext_resource type="Script" uid="uid://bixnc8nuqiuh1" path="res://scripts/fila_intento.gd" id="1_w5u6q"]
+
+[node name="filaIntento" type="GridContainer" unique_id=1127285321]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -205.75
+offset_top = -95.0
+offset_right = 205.75
+offset_bottom = 95.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 15
+size_flags_vertical = 15
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 3
+script = ExtResource("1_w5u6q")
+
+[node name="cuadradoDebut" parent="." unique_id=1999096846 instance=ExtResource("1_e5fvt")]
+layout_mode = 2
+size_flags_horizontal = 15
+size_flags_vertical = 15
+
+[node name="cuadradoMiembros" parent="." unique_id=286030939 instance=ExtResource("1_e5fvt")]
+layout_mode = 2
+
+[node name="cuadradoPopu" parent="." unique_id=958109899 instance=ExtResource("1_e5fvt")]
+layout_mode = 2
+
+[node name="cuadradoGender" parent="." unique_id=1385936287 instance=ExtResource("1_e5fvt")]
+layout_mode = 2
+
+[node name="cuadradoGenre" parent="." unique_id=707559739 instance=ExtResource("1_e5fvt")]
+layout_mode = 2
+
+[node name="cuadradoCountry" parent="." unique_id=1660322262 instance=ExtResource("1_e5fvt")]
+layout_mode = 2

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://bvaxf3fmctdcr"]
+
+[ext_resource type="Script" uid="uid://dr2waekruo35l" path="res://scripts/cuadrado_info.gd" id="1_lxjjt"]
+[ext_resource type="FontFile" uid="uid://be0g1v1mcuca5" path="res://ui/fonts/GothamLight.ttf" id="2_atyis"]
+[ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="3_85wc4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcvrp"]
+bg_color = Color(0.19076231, 0.19076234, 0.19076222, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_detail = 14
+
+[node name="cuadradoInfo" type="Control" unique_id=1999096846]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="cuadrado" type="Panel" parent="." unique_id=180856024]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 130.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dcvrp")
+script = ExtResource("1_lxjjt")
+
+[node name="categoria" type="Label" parent="cuadrado" unique_id=1798720309]
+layout_mode = 0
+offset_top = 9.0
+offset_right = 130.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("2_atyis")
+text = "DEBUT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resultado" type="Label" parent="cuadrado" unique_id=1062149633]
+layout_mode = 0
+offset_top = 27.0
+offset_right = 130.0
+offset_bottom = 86.0
+theme_override_fonts/font = ExtResource("3_85wc4")
+theme_override_font_sizes/font_size = 33
+text = "2015"
+horizontal_alignment = 1
+vertical_alignment = 1

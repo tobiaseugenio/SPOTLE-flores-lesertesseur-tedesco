@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://nfauilhr6gj7"]
+[gd_scene format=3 uid="uid://bn2cs5nvrp1iu"]
 
-[ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle.gd" id="1_f0h64"]
+[ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle.gd" id="1_7gpbm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3o2"]
 bg_color = Color(0.92535293, 0.9253528, 0.9253529, 1)
@@ -12,7 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_f0h64")
+script = ExtResource("1_7gpbm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=119045525]
 layout_mode = 1
@@ -34,7 +34,7 @@ theme_override_colors/font_selected_color = Color(0.18359044, 0.18359044, 0.1835
 theme_override_colors/font_placeholder_color = Color(0.1943489, 0.19434947, 0.19434908, 0.6)
 theme_override_colors/selection_color = Color(0.23753911, 0.23753914, 0.23753908, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
-placeholder_text = "     escribe el nombre de un artista..."
+placeholder_text = "     escribe el nombre de una película..."
 
 [node name="ItemList" type="ItemList" parent="VBoxContainer" unique_id=1687769127]
 clip_contents = false

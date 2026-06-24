@@ -3,14 +3,9 @@
 [ext_resource type="Script" uid="uid://iobyx830vk6g" path="res://scripts/harmonies/verificador_estado_botones.gd" id="1_22aiq"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_l3ncf"]
 [ext_resource type="Script" uid="uid://cy2a1lp5ca356" path="res://scripts/harmonies/conectar_botones.gd" id="2_nkepk"]
+[ext_resource type="Script" uid="uid://c2ukkd8m0vij2" path="res://scripts/harmonies/cargar_partida.gd" id="4_d05f5"]
 
 [node name="Harmonies" type="Node2D" unique_id=436709089]
-
-[node name="VerificadorEstadoBotones" type="Node" parent="." unique_id=1830057386]
-script = ExtResource("1_22aiq")
-
-[node name="ConectarBotones" type="Node" parent="." unique_id=537003701]
-script = ExtResource("2_nkepk")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=972581184]
 offset_left = 243.0
@@ -114,3 +109,12 @@ Seleccioná 4 cuadrados y luego presioná el botón de verificar para adivinar
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="VerificadorEstadoBotones" type="Node" parent="." unique_id=1830057386]
+script = ExtResource("1_22aiq")
+
+[node name="ConectarBotones" type="Node" parent="." unique_id=537003701]
+script = ExtResource("2_nkepk")
+
+[node name="CargarPartida" type="Node" parent="." unique_id=1785008959]
+script = ExtResource("4_d05f5")

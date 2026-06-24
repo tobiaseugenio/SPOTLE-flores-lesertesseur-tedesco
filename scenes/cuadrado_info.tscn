@@ -14,15 +14,20 @@ border_color = Color(0, 0, 0, 1)
 corner_detail = 14
 
 [node name="cuadradoInfo" type="Control" unique_id=1999096846]
+custom_minimum_size = Vector2(160, 89)
 layout_mode = 3
 anchors_preset = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 165.0
+offset_bottom = 88.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="cuadrado" type="Panel" parent="." unique_id=180856024]
 layout_mode = 1
 anchors_preset = -1
-offset_right = 130.0
+offset_right = 163.0
 offset_bottom = 89.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_dcvrp")
 script = ExtResource("1_lxjjt")
@@ -30,7 +35,7 @@ script = ExtResource("1_lxjjt")
 [node name="categoria" type="Label" parent="cuadrado" unique_id=1798720309]
 layout_mode = 0
 offset_top = 9.0
-offset_right = 130.0
+offset_right = 163.0
 offset_bottom = 43.0
 theme_override_fonts/font = ExtResource("2_atyis")
 text = "DEBUT"
@@ -40,10 +45,11 @@ vertical_alignment = 1
 [node name="resultado" type="Label" parent="cuadrado" unique_id=1062149633]
 layout_mode = 0
 offset_top = 27.0
-offset_right = 130.0
+offset_right = 160.0
 offset_bottom = 86.0
 theme_override_fonts/font = ExtResource("3_85wc4")
-theme_override_font_sizes/font_size = 33
+theme_override_font_sizes/font_size = 28
 text = "2015"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 3

@@ -2,10 +2,11 @@ extends Control
 
 @onready var barraBusq = $VBoxContainer/LineEdit
 @onready var lista = $VBoxContainer/ItemList
-@onready var contIntentos = $contenedorIntentos
+@onready var contIntentos =  $VBoxContainer/ScrollContainer/contenedorIntentos
 
 var escenaFila = preload("res://scenes/fila_intento.tscn")
 var artistaSecreto: Dictionary
+var intentos = 0
 
 func _ready():
 	artistaSecreto = SelectorArtista.elegirArtista() 
@@ -32,6 +33,10 @@ func _on_line_edit_text_changed(nuevoTexto: String):
 	
 func _on_item_list_item_selected(index: int) -> void:
 	var nombre = lista.get_item_text(index)
+	
+	if intentos >= 10: return
+	intentos += 1
+	
 	var datosArtista = {}
 	
 	for artista in Artistas.LISTA_ARTISTAS: 
@@ -41,6 +46,8 @@ func _on_item_list_item_selected(index: int) -> void:
 	
 	var nuevaFila = escenaFila.instantiate()
 	contIntentos.add_child(nuevaFila)
+	contIntentos.move_child(nuevaFila, 0)
+	
 	nuevaFila.compararDatos(datosArtista, artistaSecreto)
 	
 	barraBusq.text = ""

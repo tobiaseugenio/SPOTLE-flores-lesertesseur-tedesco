@@ -3,41 +3,54 @@
 [ext_resource type="PackedScene" uid="uid://bvaxf3fmctdcr" path="res://scenes/cuadrado_info.tscn" id="1_e5fvt"]
 [ext_resource type="Script" uid="uid://bixnc8nuqiuh1" path="res://scripts/fila_intento.gd" id="1_w5u6q"]
 
-[node name="filaIntento" type="GridContainer" unique_id=1127285321]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -205.75
-offset_top = -95.0
-offset_right = 205.75
-offset_bottom = 95.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 15
-size_flags_vertical = 15
-theme_override_constants/h_separation = 2
-theme_override_constants/v_separation = 2
-columns = 3
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5u6q"]
+corner_detail = 15
+
+[node name="filaIntento" type="VBoxContainer" unique_id=1097431565]
+offset_right = 411.5
+offset_bottom = 244.0
+size_flags_horizontal = 13
+size_flags_vertical = 13
+theme_override_constants/separation = 11
 script = ExtResource("1_w5u6q")
 
-[node name="cuadradoDebut" parent="." unique_id=1999096846 instance=ExtResource("1_e5fvt")]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1954931396]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Panel" type="Panel" parent="HBoxContainer" unique_id=1076117802]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_w5u6q")
+
+[node name="Label" type="Label" parent="HBoxContainer" unique_id=1348483454]
+layout_mode = 2
+text = "NOMBRE ARTISTA"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=892182606]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 4
+columns = 3
+
+[node name="cuadradoDebut" parent="GridContainer" unique_id=1999096846 instance=ExtResource("1_e5fvt")]
 layout_mode = 2
 size_flags_horizontal = 15
 size_flags_vertical = 15
 
-[node name="cuadradoMiembros" parent="." unique_id=286030939 instance=ExtResource("1_e5fvt")]
+[node name="cuadradoMiembros" parent="GridContainer" unique_id=286030939 instance=ExtResource("1_e5fvt")]
 layout_mode = 2
 
-[node name="cuadradoPopu" parent="." unique_id=958109899 instance=ExtResource("1_e5fvt")]
+[node name="cuadradoPopu" parent="GridContainer" unique_id=958109899 instance=ExtResource("1_e5fvt")]
 layout_mode = 2
 
-[node name="cuadradoGender" parent="." unique_id=1385936287 instance=ExtResource("1_e5fvt")]
+[node name="cuadradoGender" parent="GridContainer" unique_id=1385936287 instance=ExtResource("1_e5fvt")]
 layout_mode = 2
 
-[node name="cuadradoGenre" parent="." unique_id=707559739 instance=ExtResource("1_e5fvt")]
+[node name="cuadradoGenre" parent="GridContainer" unique_id=707559739 instance=ExtResource("1_e5fvt")]
 layout_mode = 2
 
-[node name="cuadradoCountry" parent="." unique_id=1660322262 instance=ExtResource("1_e5fvt")]
+[node name="cuadradoCountry" parent="GridContainer" unique_id=1660322262 instance=ExtResource("1_e5fvt")]
 layout_mode = 2

@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://rkhgyehpt8ot"]
+
+[ext_resource type="Script" uid="uid://iobyx830vk6g" path="res://scripts/verificador_estado_botones.gd" id="1_22aiq"]
+
+[node name="Harmonies" type="Node2D" unique_id=436709089]
+
+[node name="VerificadorEstadoBotones" type="Node" parent="." unique_id=1830057386]
+script = ExtResource("1_22aiq")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=972581184]
+offset_left = 177.0
+offset_top = 27.0
+offset_right = 989.0
+offset_bottom = 639.0
+columns = 4
+
+[node name="Button" type="Button" parent="GridContainer" unique_id=121291312]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=1731379758]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=1185331397]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=620281300]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=310223419]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=1753946212]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=96079068]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=1090171231]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=2059906719]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button10" type="Button" parent="GridContainer" unique_id=333367899]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button11" type="Button" parent="GridContainer" unique_id=1546626090]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button12" type="Button" parent="GridContainer" unique_id=1478697116]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button13" type="Button" parent="GridContainer" unique_id=743852641]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button14" type="Button" parent="GridContainer" unique_id=915900216]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button15" type="Button" parent="GridContainer" unique_id=1804359134]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"
+
+[node name="Button16" type="Button" parent="GridContainer" unique_id=333187878]
+custom_minimum_size = Vector2(200, 150)
+layout_mode = 2
+text = "Texto de ejemplo"

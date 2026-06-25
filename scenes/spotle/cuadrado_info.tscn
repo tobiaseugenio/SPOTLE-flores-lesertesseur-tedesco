@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bvaxf3fmctdcr"]
 
-[ext_resource type="Script" uid="uid://dr2waekruo35l" path="res://scripts/cuadrado_info.gd" id="1_lxjjt"]
+[ext_resource type="Script" uid="uid://dr2waekruo35l" path="res://scripts/spotle/cuadrado_info.gd" id="1_lxjjt"]
 [ext_resource type="FontFile" uid="uid://be0g1v1mcuca5" path="res://ui/fonts/GothamLight.ttf" id="2_atyis"]
 [ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="3_85wc4"]
 

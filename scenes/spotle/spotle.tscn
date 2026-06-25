@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://nfauilhr6gj7"]
 
-[ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle.gd" id="1_f0h64"]
+[ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle/spotle.gd" id="1_f0h64"]
 [ext_resource type="FontFile" uid="uid://b4klqjvounqv6" path="res://ui/fonts/Gotham-BookItalic.otf" id="2_xro1t"]
 [ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="3_tu6e5"]
 [ext_resource type="PackedScene" uid="uid://c5ye571v6r5vy" path="res://scenes/ganasteCartel.tscn" id="4_tu6e5"]

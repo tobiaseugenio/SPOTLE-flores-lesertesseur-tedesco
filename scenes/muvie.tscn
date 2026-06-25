@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bn2cs5nvrp1iu"]
 
-[ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle.gd" id="1_7gpbm"]
+[ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle/spotle.gd" id="1_7gpbm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3o2"]
 bg_color = Color(0.92535293, 0.9253528, 0.9253529, 1)

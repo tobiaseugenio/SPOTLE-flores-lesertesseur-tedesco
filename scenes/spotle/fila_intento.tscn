@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://breh24q6uy01v"]
 
-[ext_resource type="PackedScene" uid="uid://bvaxf3fmctdcr" path="res://scenes/cuadrado_info.tscn" id="1_e5fvt"]
-[ext_resource type="Script" uid="uid://bixnc8nuqiuh1" path="res://scripts/fila_intento.gd" id="1_w5u6q"]
+[ext_resource type="PackedScene" uid="uid://bvaxf3fmctdcr" path="res://scenes/spotle/cuadrado_info.tscn" id="1_e5fvt"]
+[ext_resource type="Script" uid="uid://bixnc8nuqiuh1" path="res://scripts/spotle/fila_intento.gd" id="1_w5u6q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5u6q"]
 corner_detail = 15

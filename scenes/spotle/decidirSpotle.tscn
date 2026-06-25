@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://vhcho271dexe"]
+
+[ext_resource type="Script" uid="uid://cjy6ex1ewxs66" path="res://scripts/decidir_spotle.gd" id="1_wlu48"]
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_xi4qg"]
+[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_wlu48"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2twj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l8wlf"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lekk7"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="decidirSpotle" type="Control" unique_id=2110299545]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wlu48")
+
+[node name="Panel" type="Panel" parent="." unique_id=1712558229]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_g2twj")
+
+[node name="Label" type="Label" parent="." unique_id=1052747513]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 226.0
+offset_right = 1117.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("1_xi4qg")
+theme_override_font_sizes/font_size = 100
+text = "SPOTLE"
+horizontal_alignment = 1
+
+[node name="btnMusica" type="Button" parent="." unique_id=1594893506]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -231.0
+offset_top = 123.0
+offset_right = -38.0
+offset_bottom = 167.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_wlu48")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_l8wlf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lekk7")
+text = "música"
+
+[node name="btnPelis" type="Button" parent="." unique_id=1371218991]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.0
+offset_top = 123.0
+offset_right = 231.0
+offset_bottom = 167.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_wlu48")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_l8wlf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lekk7")
+text = "peliculas"
+
+[node name="comoJugar" type="Button" parent="." unique_id=1425659227]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -1.0
+offset_right = 96.0
+offset_bottom = 43.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.11372549, 0.90588236, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_wlu48")
+theme_override_font_sizes/font_size = 25
+text = "¿cómo jugar?"
+
+[connection signal="pressed" from="btnMusica" to="." method="_on_btn_musica_pressed"]
+[connection signal="pressed" from="btnPelis" to="." method="_on_btn_pelis_pressed"]
+[connection signal="pressed" from="comoJugar" to="." method="_on_como_jugar_pressed"]

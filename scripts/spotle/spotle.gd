@@ -4,7 +4,7 @@ extends Control
 @onready var lista = $VBoxContainer/ItemList
 @onready var contIntentos =  $VBoxContainer/ScrollContainer/contenedorIntentos
 
-var escenaFila = preload("res://scenes/fila_intento.tscn")
+var escenaFila = preload("res://scenes/spotle/fila_intento.tscn")
 var artistaSecreto: Dictionary
 var intentos = 0
 var artistasIntentados: Array = []

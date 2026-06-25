@@ -50,6 +50,7 @@ func _on_item_list_item_selected(index: int) -> void:
 		$ganasteCartel.show()
 	elif intentos >= 10:
 		$perdisteCartel.show()
+		$perdisteCartel.mostrarNombreSecreto(artistaSecreto["nombre"])
 	
 	if nombre in artistasIntentados:
 		$intentado.show()

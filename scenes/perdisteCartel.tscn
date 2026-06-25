@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://fokhqbwh2k8u"]
 
+[ext_resource type="Script" uid="uid://bw5dc4k5emvgo" path="res://scripts/spotle/perdiste_cartel.gd" id="1_cyhrs"]
 [ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="1_vv1l2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cyhrs"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cyhrs")
 
 [node name="Panel" type="Panel" parent="." unique_id=1671930379]
 layout_mode = 1

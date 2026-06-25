@@ -63,6 +63,22 @@ func configurar(categoria: String, intento, correcto):
 					textoResultado += " ↑"
 				elif int(correcto) < int(intento):
 					textoResultado += " ↓"
+			"año":
+				var dif = int(correcto) - int(intento)
+				if abs(dif) <= 5:
+					estuvoCerca()
+				else:
+					incorrecto()
+				if dif > 0: textoResultado += " ↑"
+				else: textoResultado += " ↓"
+			"rating":
+				var dif = int(correcto) - int(intento)
+				if abs(dif) <= 5:
+					estuvoCerca()
+				else:
+					incorrecto()
+				if dif > 0: textoResultado += " ↑"
+				else: textoResultado += " ↓"
 			_:
 				nuevoEstilo.bg_color = COLOR_GRIS
 				
@@ -81,6 +97,9 @@ func configurarGeneros(generosIntento: Array, generosCorrectos: Array) -> void:
 			label.add_theme_color_override("font_color", Color.WHITE)
 		else:
 			label.add_theme_color_override("font_color", Color.GRAY)
+			
+		label.add_theme_font_size_override("font_size", 22)
+		label.add_theme_font_override("font", load("res://ui/fonts/Gotham-Bold.otf"))
 		labelResultado.add_child(label)
 	
 	add_theme_stylebox_override("panel", nuevoEstilo)

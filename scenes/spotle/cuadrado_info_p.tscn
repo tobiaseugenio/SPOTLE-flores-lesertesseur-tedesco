@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dri21wxdny70q"]
+
+[ext_resource type="Script" uid="uid://dr2waekruo35l" path="res://scripts/spotle/cuadrado_info.gd" id="1_xvynj"]
+[ext_resource type="FontFile" uid="uid://be0g1v1mcuca5" path="res://ui/fonts/GothamLight.ttf" id="2_m2x51"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dcvrp"]
+bg_color = Color(0.19076231, 0.19076234, 0.19076222, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_detail = 14
+
+[node name="cuadradoInfoP" type="Control" unique_id=1999096846]
+custom_minimum_size = Vector2(160, 89)
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 331.0
+offset_bottom = 88.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="cuadrado" type="Panel" parent="." unique_id=180856024]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 330.0
+offset_bottom = 89.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dcvrp")
+script = ExtResource("1_xvynj")
+
+[node name="categoria" type="Label" parent="cuadrado" unique_id=1798720309]
+layout_mode = 0
+offset_top = 9.0
+offset_right = 328.0
+offset_bottom = 43.0
+theme_override_fonts/font = ExtResource("2_m2x51")
+text = "GENEROS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resultado" type="HBoxContainer" parent="cuadrado" unique_id=1480040784]
+layout_mode = 0
+offset_top = 36.0
+offset_right = 331.0
+offset_bottom = 87.0

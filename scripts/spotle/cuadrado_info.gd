@@ -68,3 +68,19 @@ func configurar(categoria: String, intento, correcto):
 				
 	labelResultado.text = textoResultado
 	add_theme_stylebox_override("panel", nuevoEstilo)
+	
+func configurarGeneros(generosIntento: Array, generosCorrectos: Array) -> void:
+	labelCategoria.text = "GÉNEROS"
+	for res in labelResultado.get_children():
+		res.queue_free()
+	
+	for genero in generosIntento:
+		var label = Label.new()
+		label.text = genero
+		if genero in generosCorrectos:
+			label.add_theme_color_override("font_color", Color.WHITE)
+		else:
+			label.add_theme_color_override("font_color", Color.GRAY)
+		labelResultado.add_child(label)
+	
+	add_theme_stylebox_override("panel", nuevoEstilo)

@@ -13,10 +13,12 @@ func _process(delta: float) -> void:
 
 func _on_btn_musica_pressed() -> void:
 	ModoJuego.modo = "musica"
+	get_tree().change_scene_to_file("res://scenes/spotle/spotle.tscn")
 
 
 func _on_btn_pelis_pressed() -> void:
 	ModoJuego.modo = "pelis"
+	get_tree().change_scene_to_file("res://scenes/spotle/spotle.tscn")
 
 
 func _on_como_jugar_pressed() -> void:

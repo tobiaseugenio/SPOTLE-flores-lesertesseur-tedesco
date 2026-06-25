@@ -21,7 +21,7 @@ enum GeneroCine {
 	DRAMA,
 	TERROR,
 	ROMANCE,
-	CIENCIA_FICCION,
+	SCI_FI,
 	ANIMACION,
 	THRILLER,
 	FANTASIA,
@@ -45,7 +45,7 @@ const LISTA_PELICULAS = [
 		"director": "Robert Zemeckis",
 		"protagonistas": ["Michael J. Fox"],
 		"secundarios": ["Christopher Lloyd", "Lea Thompson", "Crispin Glover"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.AVENTURA, GeneroCine.COMEDIA]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.AVENTURA, GeneroCine.COMEDIA]
 	},
 	{
 		"nombre": "Avengers: Endgame",
@@ -57,7 +57,7 @@ const LISTA_PELICULAS = [
 		"director": "Anthony y Joe Russo",
 		"protagonistas": ["Robert Downey Jr.", "Chris Evans"],
 		"secundarios": ["Scarlett Johansson", "Chris Hemsworth", "Mark Ruffalo", "Jeremy Renner"],
-		"generos": [GeneroCine.ACCION, GeneroCine.AVENTURA, GeneroCine.CIENCIA_FICCION]
+		"generos": [GeneroCine.ACCION, GeneroCine.AVENTURA, GeneroCine.SCI_FI]
 	},
 	{
 		"nombre": "Toy Story",
@@ -117,7 +117,7 @@ const LISTA_PELICULAS = [
 		"director": "Christopher Nolan",
 		"protagonistas": ["Leonardo DiCaprio"],
 		"secundarios": ["Joseph Gordon-Levitt", "Elliot Page", "Tom Hardy", "Ken Watanabe"],
-		"generos": [GeneroCine.ACCION, GeneroCine.CIENCIA_FICCION, GeneroCine.THRILLER]
+		"generos": [GeneroCine.ACCION, GeneroCine.SCI_FI, GeneroCine.THRILLER]
 	},
 	{
 		"nombre": "Joker",
@@ -141,7 +141,7 @@ const LISTA_PELICULAS = [
 		"director": "Christopher Nolan",
 		"protagonistas": ["Matthew McConaughey"],
 		"secundarios": ["Anne Hathaway", "Jessica Chastain", "Michael Caine"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.DRAMA, GeneroCine.AVENTURA]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.DRAMA, GeneroCine.AVENTURA]
 	},
 	{
 		"nombre": "Pulp Fiction",
@@ -225,7 +225,7 @@ const LISTA_PELICULAS = [
 		"director": "Lana y Lilly Wachowski",
 		"protagonistas": ["Keanu Reeves"],
 		"secundarios": ["Laurence Fishburne", "Carrie-Anne Moss", "Hugo Weaving"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.ACCION, GeneroCine.THRILLER]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.ACCION, GeneroCine.THRILLER]
 	},
 	{
 		"nombre": "Parasite",
@@ -273,7 +273,7 @@ const LISTA_PELICULAS = [
 		"director": "Ridley Scott",
 		"protagonistas": ["Sigourney Weaver"],
 		"secundarios": ["Tom Skerritt", "John Hurt", "Ian Holm"],
-		"generos": [GeneroCine.TERROR, GeneroCine.CIENCIA_FICCION, GeneroCine.THRILLER]
+		"generos": [GeneroCine.TERROR, GeneroCine.SCI_FI, GeneroCine.THRILLER]
 	},
 	{
 		"nombre": "Ratatouille",
@@ -297,7 +297,7 @@ const LISTA_PELICULAS = [
 		"director": "George Miller",
 		"protagonistas": ["Tom Hardy", "Charlize Theron"],
 		"secundarios": ["Nicholas Hoult", "Hugh Keays-Byrne"],
-		"generos": [GeneroCine.ACCION, GeneroCine.AVENTURA, GeneroCine.CIENCIA_FICCION]
+		"generos": [GeneroCine.ACCION, GeneroCine.AVENTURA, GeneroCine.SCI_FI]
 	},
 	{
 		"nombre": "Brokeback Mountain",
@@ -345,7 +345,7 @@ const LISTA_PELICULAS = [
 		"director": "Steven Spielberg",
 		"protagonistas": ["Sam Neill"],
 		"secundarios": ["Jeff Goldblum", "Laura Dern", "Richard Attenborough"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.AVENTURA, GeneroCine.THRILLER]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.AVENTURA, GeneroCine.THRILLER]
 	},
 	{
 		"nombre": "Up",
@@ -417,7 +417,7 @@ const LISTA_PELICULAS = [
 		"director": "Michel Gondry",
 		"protagonistas": ["Jim Carrey", "Kate Winslet"],
 		"secundarios": ["Kirsten Dunst", "Mark Ruffalo", "Elijah Wood"],
-		"generos": [GeneroCine.DRAMA, GeneroCine.ROMANCE, GeneroCine.CIENCIA_FICCION]
+		"generos": [GeneroCine.DRAMA, GeneroCine.ROMANCE, GeneroCine.SCI_FI]
 	},
 	{
 		"nombre": "Goodfellas",
@@ -441,7 +441,7 @@ const LISTA_PELICULAS = [
 		"director": "Stanley Kubrick",
 		"protagonistas": ["Keir Dullea"],
 		"secundarios": ["Gary Lockwood", "William Sylvester"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.DRAMA]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.DRAMA]
 	},
 	{
 		"nombre": "Django Unchained",
@@ -465,7 +465,7 @@ const LISTA_PELICULAS = [
 		"director": "Spike Jonze",
 		"protagonistas": ["Joaquin Phoenix"],
 		"secundarios": ["Amy Adams", "Rooney Mara", "Olivia Wilde"],
-		"generos": [GeneroCine.DRAMA, GeneroCine.ROMANCE, GeneroCine.CIENCIA_FICCION]
+		"generos": [GeneroCine.DRAMA, GeneroCine.ROMANCE, GeneroCine.SCI_FI]
 	},
 	{
 		"nombre": "Moonlight",
@@ -489,7 +489,7 @@ const LISTA_PELICULAS = [
 		"director": "Denis Villeneuve",
 		"protagonistas": ["Ryan Gosling"],
 		"secundarios": ["Harrison Ford", "Ana de Armas", "Jared Leto"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.THRILLER, GeneroCine.DRAMA]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.THRILLER, GeneroCine.DRAMA]
 	},
 	{
 		"nombre": "Everything Everywhere All at Once",
@@ -501,7 +501,7 @@ const LISTA_PELICULAS = [
 		"director": "Daniel Kwan y Daniel Scheinert",
 		"protagonistas": ["Michelle Yeoh"],
 		"secundarios": ["Ke Huy Quan", "Jamie Lee Curtis", "Stephanie Hsu"],
-		"generos": [GeneroCine.ACCION, GeneroCine.COMEDIA, GeneroCine.CIENCIA_FICCION]
+		"generos": [GeneroCine.ACCION, GeneroCine.COMEDIA, GeneroCine.SCI_FI]
 	},
 	{
 		"nombre": "Dune",
@@ -513,7 +513,7 @@ const LISTA_PELICULAS = [
 		"director": "Denis Villeneuve",
 		"protagonistas": ["Timothée Chalamet"],
 		"secundarios": ["Zendaya", "Rebecca Ferguson", "Oscar Isaac", "Josh Brolin"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.AVENTURA, GeneroCine.DRAMA]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.AVENTURA, GeneroCine.DRAMA]
 	},
 	{
 		"nombre": "Midsommar",
@@ -657,7 +657,7 @@ const LISTA_PELICULAS = [
 		"director": "Andrew Stanton",
 		"protagonistas": ["Ben Burtt"],
 		"secundarios": ["Elissa Knight", "Jeff Garlin", "Sigourney Weaver"],
-		"generos": [GeneroCine.ANIMACION, GeneroCine.CIENCIA_FICCION, GeneroCine.ROMANCE]
+		"generos": [GeneroCine.ANIMACION, GeneroCine.SCI_FI, GeneroCine.ROMANCE]
 	},
 	{
 		"nombre": "Oldboy",
@@ -705,7 +705,7 @@ const LISTA_PELICULAS = [
 		"director": "Denis Villeneuve",
 		"protagonistas": ["Amy Adams"],
 		"secundarios": ["Jeremy Renner", "Forest Whitaker", "Michael Stuhlbarg"],
-		"generos": [GeneroCine.CIENCIA_FICCION, GeneroCine.DRAMA, GeneroCine.MISTERIO]
+		"generos": [GeneroCine.SCI_FI, GeneroCine.DRAMA, GeneroCine.MISTERIO]
 	},
 	{
 		"nombre": "Casino",

@@ -1,15 +1,23 @@
 [gd_scene format=3 uid="uid://nfauilhr6gj7"]
 
 [ext_resource type="Script" uid="uid://bwph03ugcg4t8" path="res://scripts/spotle.gd" id="1_f0h64"]
+[ext_resource type="FontFile" uid="uid://b4klqjvounqv6" path="res://ui/fonts/Gotham-BookItalic.otf" id="2_xro1t"]
+[ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="3_tu6e5"]
+[ext_resource type="PackedScene" uid="uid://c5ye571v6r5vy" path="res://scenes/ganasteCartel.tscn" id="4_tu6e5"]
+[ext_resource type="PackedScene" uid="uid://fokhqbwh2k8u" path="res://scenes/perdisteCartel.tscn" id="5_gakhy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3o2"]
 bg_color = Color(0.92535293, 0.9253528, 0.9253529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0h64"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
 
 [node name="spotle" type="Control" unique_id=527811068]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_f0h64")
@@ -26,6 +34,10 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
+[node name="labelIntentos" type="Label" parent="VBoxContainer" unique_id=449950242]
+layout_mode = 2
+horizontal_alignment = 2
+
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer" unique_id=665239928]
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
@@ -33,6 +45,7 @@ theme_override_colors/font_color = Color(0.2885176, 0.2885182, 0.2885177, 1)
 theme_override_colors/font_selected_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
 theme_override_colors/font_placeholder_color = Color(0.1943489, 0.19434947, 0.19434908, 0.6)
 theme_override_colors/selection_color = Color(0.23753911, 0.23753914, 0.23753908, 1)
+theme_override_fonts/font = ExtResource("2_xro1t")
 theme_override_styles/normal = SubResource("StyleBoxFlat_cr3o2")
 placeholder_text = "     escribe el nombre de un artista..."
 
@@ -53,6 +66,32 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 15
+
+[node name="intentado" type="Label" parent="." unique_id=248437001]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -21.0
+offset_right = 184.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_fonts/font = ExtResource("3_tu6e5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f0h64")
+text = "ya intentaste ese artista, probá con otro!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ganasteCartel" parent="." unique_id=1868593379 instance=ExtResource("4_tu6e5")]
+layout_mode = 1
+
+[node name="perdisteCartel" parent="." unique_id=725645899 instance=ExtResource("5_gakhy")]
+layout_mode = 1
 
 [connection signal="text_changed" from="VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="item_selected" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]

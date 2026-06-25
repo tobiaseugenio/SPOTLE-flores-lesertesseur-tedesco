@@ -6,16 +6,16 @@ extends Panel
 const COLOR_VERDE = Color("3b823e")
 const COLOR_AMARILLO = Color("bda12c")
 const COLOR_GRIS = Color("303030")
-var nuevoEstilo = get_theme_stylebox("panel").duplicate()
+var nuevoEstilo: StyleBoxFlat
+
+func _ready():
+	nuevoEstilo = get_theme_stylebox("panel").duplicate()
 	
 func estuvoCerca() -> void:
 	nuevoEstilo.bg_color = COLOR_AMARILLO
 
 func incorrecto() -> void:
 	nuevoEstilo.bg_color = COLOR_GRIS
-
-func artistaAcertado() -> void:
-	nuevoEstilo.bg_color = COLOR_VERDE
 
 func configurar(categoria: String, intento, correcto):
 	labelCategoria.text = categoria.to_upper()

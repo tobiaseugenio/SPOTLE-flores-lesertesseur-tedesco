@@ -7,10 +7,14 @@ extends Control
 var escenaFila = preload("res://scenes/fila_intento.tscn")
 var artistaSecreto: Dictionary
 var intentos = 0
+var artistasIntentados: Array = []
 
 func _ready():
 	artistaSecreto = SelectorArtista.elegirArtista() 
 	lista.hide()
+	$intentado.hide()
+	$ganasteCartel.hide()
+	$perdisteCartel.hide()
 	
 func _on_line_edit_text_changed(nuevoTexto: String):
 	lista.clear() 
@@ -34,8 +38,19 @@ func _on_line_edit_text_changed(nuevoTexto: String):
 func _on_item_list_item_selected(index: int) -> void:
 	var nombre = lista.get_item_text(index)
 	
-	if intentos >= 10: return
+	if nombre == artistaSecreto["nombre"]:
+		$ganasteCartel.show()
+	elif intentos >= 10:
+		$perdisteCartel.show()
+	
+	if nombre in artistasIntentados:
+		$intentado.show()
+		await get_tree().create_timer(3.0).timeout
+		$intentado.hide()
+		return
+	artistasIntentados.append(nombre)
 	intentos += 1
+	$VBoxContainer/labelIntentos.text = str(intentos) + " de 10 intentos"
 	
 	var datosArtista = {}
 	

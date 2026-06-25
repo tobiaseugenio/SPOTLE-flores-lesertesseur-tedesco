@@ -10,20 +10,14 @@ extends VBoxContainer
 
 func compararDatos(artistaElegido: Dictionary, artistaSecreto: Dictionary):
 	labelNombre.text = artistaElegido["nombre"]
+	
 	if artistaElegido["nombre"] == artistaSecreto["nombre"]:
-		cuadradoDebut.artistaAcertado()
-		cuadradoMiembros.artistaAcertado()
-		cuadradoPopularidad.artistaAcertado()
-		cuadradoPais.artistaAcertado()
-		cuadradoGender.artistaAcertado()
-		cuadradoGenre.artistaAcertado()
-		return
+		artistaSecreto = artistaElegido
 		
 	cuadradoDebut.configurar("Debut", artistaElegido["debut"], artistaSecreto["debut"])
 	cuadradoPopularidad.configurar("Popularidad", artistaElegido["popularidad"], artistaSecreto["popularidad"])
 	cuadradoPais.configurar("Pais", artistaElegido["pais"], artistaSecreto["pais"])
 	cuadradoMiembros.configurar("Miembros", artistaElegido["miembros"], artistaSecreto["miembros"])
-	cuadradoGender.configurar("Gender", artistaElegido["genero"], artistaSecreto["genero"])
 	
 	#pasarlo a string para q no vuelva num d array
 	var strGenderE = Artistas.Genero.keys()[artistaElegido["genero"]].capitalize()

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://vhcho271dexe"]
 
-[ext_resource type="Script" uid="uid://cjy6ex1ewxs66" path="res://scripts/decidir_spotle.gd" id="1_wlu48"]
-[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_xi4qg"]
-[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_wlu48"]
+[ext_resource type="Script" uid="uid://cjy6ex1ewxs66" path="res://scripts/decidir_spotle.gd" id="1_83mw5"]
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="2_bv3ia"]
+[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="3_rgfis"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g2twj"]
 bg_color = Color(0, 0, 0, 1)
@@ -21,7 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_wlu48")
+script = ExtResource("1_83mw5")
 
 [node name="Panel" type="Panel" parent="." unique_id=1712558229]
 layout_mode = 1
@@ -39,7 +39,7 @@ offset_top = 226.0
 offset_right = 1117.0
 offset_bottom = 338.0
 theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
-theme_override_fonts/font = ExtResource("1_xi4qg")
+theme_override_fonts/font = ExtResource("2_bv3ia")
 theme_override_font_sizes/font_size = 100
 text = "SPOTLE"
 horizontal_alignment = 1
@@ -59,7 +59,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
-theme_override_fonts/font = ExtResource("2_wlu48")
+theme_override_fonts/font = ExtResource("3_rgfis")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_l8wlf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_lekk7")
@@ -80,7 +80,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
-theme_override_fonts/font = ExtResource("2_wlu48")
+theme_override_fonts/font = ExtResource("3_rgfis")
 theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_l8wlf")
 theme_override_styles/hover = SubResource("StyleBoxFlat_lekk7")
@@ -100,7 +100,7 @@ offset_bottom = 43.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.11372549, 0.90588236, 0.3764706, 1)
-theme_override_fonts/font = ExtResource("2_wlu48")
+theme_override_fonts/font = ExtResource("3_rgfis")
 theme_override_font_sizes/font_size = 25
 text = "¿cómo jugar?"
 

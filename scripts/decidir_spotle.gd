@@ -12,12 +12,12 @@ func _process(delta: float) -> void:
 
 
 func _on_btn_musica_pressed() -> void:
-	pass # Replace with function body.
+	ModoJuego.modo = "musica"
 
 
 func _on_btn_pelis_pressed() -> void:
-	pass # Replace with function body.
+	ModoJuego.modo = "pelis"
 
 
 func _on_como_jugar_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/explicacionSpotle.tscn")
+	get_tree().change_scene_to_file("res://scenes/spotle/explicacionSpotle.tscn")

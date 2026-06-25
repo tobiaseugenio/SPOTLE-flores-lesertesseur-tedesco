@@ -3,12 +3,18 @@
 [ext_resource type="Script" uid="uid://cc6vh81nttjwa" path="res://scripts/menu_principal.gd" id="1_7moql"]
 [ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_haamj"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_7moql"]
+[ext_resource type="Texture2D" uid="uid://c4hc22lv5kcro" path="res://ui/assets/muvie.png" id="4_oveco"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rom4x"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oveco"]
 bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
 corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnrrv"]
@@ -34,11 +40,11 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rom4x")
 
 [node name="Label" type="Label" parent="." unique_id=1798005231]
 layout_mode = 0
-offset_left = 1.0
-offset_top = 181.0
-offset_right = 1153.0
-offset_bottom = 347.0
-theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+offset_left = -304.0
+offset_top = 293.0
+offset_right = 848.0
+offset_bottom = 459.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_haamj")
 theme_override_font_sizes/font_size = 150
 text = "MUVIE"
@@ -51,10 +57,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.5
-offset_top = 29.5
-offset_right = 96.5
-offset_bottom = 74.0
+offset_left = -535.0
+offset_top = 117.0
+offset_right = -342.0
+offset_bottom = 161.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -64,5 +70,10 @@ theme_override_font_sizes/font_size = 25
 theme_override_styles/normal = SubResource("StyleBoxFlat_oveco")
 theme_override_styles/hover = SubResource("StyleBoxFlat_vnrrv")
 text = "start game"
+
+[node name="Muvie" type="Sprite2D" parent="." unique_id=875950201]
+position = Vector2(782, 174.99998)
+scale = Vector2(1.015015, 1.0973333)
+texture = ExtResource("4_oveco")
 
 [connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]

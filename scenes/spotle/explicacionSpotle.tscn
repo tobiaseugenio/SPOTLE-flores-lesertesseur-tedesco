@@ -16,6 +16,9 @@ corner_detail = 20
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a47q"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fy5w7"]
+bg_color = Color(1, 1, 1, 1)
+
 [node name="explicacionSpotle" type="Control" unique_id=1101325741]
 layout_mode = 3
 anchors_preset = 15
@@ -84,5 +87,25 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_trceq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5a47q")
 text = "volver "
 script = ExtResource("5_trceq")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1884056836]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 352.0
+offset_right = 1059.0
+offset_bottom = 410.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fy5w7")
+
+[node name="Label3" type="Label" parent="." unique_id=462707207]
+layout_mode = 0
+offset_left = 905.0
+offset_top = 363.0
+offset_right = 1055.0
+offset_bottom = 425.0
+theme_override_colors/font_color = Color(3.2934102e-05, 0.0010274273, 0.00018698294, 1)
+theme_override_fonts/font = ExtResource("2_adifm")
+theme_override_font_sizes/font_size = 15
+text = "me atrapaste, es cine este juegazo"
+autowrap_mode = 3
 
 [connection signal="pressed" from="btnVolver" to="btnVolver" method="_on_pressed"]

@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bipow4srf3mie"]
 
+[ext_resource type="Script" uid="uid://br87ce8m5423" path="res://scripts/framed/framed.gd" id="1_mvvce"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we1il"]
 bg_color = Color(0.118469216, 0.283576, 0.39316037, 1)
 
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_mvvce")
 
 [node name="Panel" type="Panel" parent="." unique_id=1946928680]
 layout_mode = 1
@@ -42,7 +45,20 @@ theme_override_colors/font_selected_color = Color(0.18359044, 0.18359044, 0.1835
 theme_override_colors/font_placeholder_color = Color(0.1943489, 0.19434947, 0.19434908, 0.6)
 theme_override_colors/selection_color = Color(0.23753911, 0.23753914, 0.23753908, 1)
 theme_override_styles/normal = SubResource("StyleBoxFlat_mvvce")
-placeholder_text = " Escribi el nombre del videoclip"
+placeholder_text = " Escribi el nombre de la pelicula"
+
+[node name="ItemList" type="ItemList" parent="LineEscribir" unique_id=1830769085]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.5810001
+anchor_right = 0.5
+anchor_bottom = 1.5810001
+offset_left = -317.25
+offset_top = -20.011002
+offset_right = 321.75
+offset_bottom = 19.988998
 
 [node name="Intentos" type="LineEdit" parent="." unique_id=93930046]
 layout_mode = 0
@@ -135,3 +151,5 @@ offset_top = -19.896027
 offset_right = 234.0
 offset_bottom = 20.103973
 text = "3"
+
+[connection signal="text_changed" from="LineEscribir" to="." method="_on_line_escribir_text_changed"]

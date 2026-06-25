@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c77grj324cvmn"]
+
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_45yir"]
+[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_wx8ly"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t60v"]
+bg_color = Color(0.11764706, 0.28235295, 0.39215687, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rjxu"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 0, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkrrm"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Menu" type="Control" unique_id=1942626231]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=958419944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8t60v")
+
+[node name="Label" type="Label" parent="." unique_id=1177915654]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 208.0
+offset_right = 1150.0
+offset_bottom = 374.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_45yir")
+theme_override_font_sizes/font_size = 150
+text = "FRAMED"
+horizontal_alignment = 1
+
+[node name="ButtonStart" type="Button" parent="." unique_id=870002671]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.0
+offset_top = 122.0
+offset_right = 76.0
+offset_bottom = 166.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_wx8ly")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_6rjxu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mkrrm")
+text = "JUGAR"
+
+[node name="Panel2" type="Panel" parent="." unique_id=236156822]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 215.0
+offset_right = 936.0
+offset_bottom = 373.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cp7rlyvhd2tpo"
-path="res://.godot/imported/frame5.png-c269f094d99a3d9809393a2e49e72149.ctex"
+uid="uid://c0082nxbj7g5p"
+path="res://.godot/imported/frame2.png-ac9443509c5c595afc53ecc6915fd16c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/fotos/pulpfiction/frame5.png"
-dest_files=["res://.godot/imported/frame5.png-c269f094d99a3d9809393a2e49e72149.ctex"]
+source_file="res://fotos/matrix/frame2.png"
+dest_files=["res://.godot/imported/frame2.png-ac9443509c5c595afc53ecc6915fd16c.ctex"]
 
 [params]
 

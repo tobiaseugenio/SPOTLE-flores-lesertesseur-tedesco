@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6211nqxdvqqd"
-path="res://.godot/imported/frame4.png-be583cfd01770c3c12d21e609f82d019.ctex"
+path="res://.godot/imported/frame4.png-c3cbd7b956c81d8b1de7b40ae381d061.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/fotos/pulpfiction/frame4.png"
-dest_files=["res://.godot/imported/frame4.png-be583cfd01770c3c12d21e609f82d019.ctex"]
+source_file="res://fotos/pulp_fiction/frame4.png"
+dest_files=["res://.godot/imported/frame4.png-c3cbd7b956c81d8b1de7b40ae381d061.ctex"]
 
 [params]
 

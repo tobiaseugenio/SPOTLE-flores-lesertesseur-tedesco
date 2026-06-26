@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c77grj324cvmn"]
 
 [ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_45yir"]
+[ext_resource type="Script" uid="uid://dck27e6bvkl2j" path="res://scripts/framed/menu.gd" id="1_wx8ly"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_wx8ly"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t60v"]
@@ -25,6 +26,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_wx8ly")
 
 [node name="Panel" type="Panel" parent="." unique_id=958419944]
 layout_mode = 1

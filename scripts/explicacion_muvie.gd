@@ -11,5 +11,5 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_button_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/explicacionMuvie.tscn")
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/tablero.tscn")

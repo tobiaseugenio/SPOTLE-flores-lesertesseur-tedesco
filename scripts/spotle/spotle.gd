@@ -14,10 +14,12 @@ signal juegoTerminado(gano: bool)
 
 func _ready():
 	if ModoJuego.modo == "pelis":
+		$VBoxContainer/LineEdit.placeholder_text = "escribe el título de una pelicula"
 		escenaFila = preload("res://scenes/spotle/fila_intento_p.tscn")
 		listaItems = Peliculas.LISTA_PELICULAS
 		artistaSecreto = listaItems.pick_random()
 	else:
+		$VBoxContainer/LineEdit.placeholder_text = "escribe el nombre de un artista o banda"
 		escenaFila = preload("res://scenes/spotle/fila_intento.tscn")
 		listaItems = Artistas.LISTA_ARTISTAS
 		artistaSecreto = SelectorArtista.elegirArtista()
@@ -87,6 +89,7 @@ func _on_item_list_item_selected(index: int) -> void:
 	
 	if intentos >= intentosMaximos:
 		$perdisteCartel.show()
+		$perdisteCartel.mostrarNombreSecreto(nombre)
 		await get_tree().create_timer(2.0).timeout
 		GestorJuego.ganoElJuego = false
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")

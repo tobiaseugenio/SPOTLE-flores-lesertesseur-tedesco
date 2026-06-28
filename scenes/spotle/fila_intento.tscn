@@ -5,8 +5,8 @@
 [ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="2_6hfwe"]
 
 [node name="filaIntento" type="VBoxContainer" unique_id=1097431565]
-offset_right = 411.5
-offset_bottom = 244.0
+offset_right = 525.0
+offset_bottom = 251.0
 size_flags_horizontal = 13
 size_flags_vertical = 13
 theme_override_constants/separation = 11

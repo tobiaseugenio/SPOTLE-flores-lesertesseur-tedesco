@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://dj05h473mfh3n"]
+
+[ext_resource type="Script" uid="uid://pbva7bnl0wo4" path="res://scripts/explicacion_muvie.gd" id="1_l4u8s"]
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="2_wkaif"]
+[ext_resource type="FontFile" uid="uid://c1pcwpafxkumy" path="res://ui/fonts/Gotham-Light.otf" id="3_gmqpn"]
+[ext_resource type="Texture2D" uid="uid://nye10mgob3v8" path="res://ui/assets/aguantescorsese.png" id="4_jyxnn"]
+[ext_resource type="FontFile" uid="uid://bcmeehudcqhkr" path="res://ui/fonts/GothamMedium.ttf" id="5_2esov"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3gaw"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bjpa"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rygrv"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+
+[node name="explicacionSpotle" type="Control" unique_id=1101325741]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l4u8s")
+
+[node name="Panel" type="Panel" parent="." unique_id=1704771550]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_p3gaw")
+
+[node name="Label" type="Label" parent="." unique_id=1889671872]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 38.0
+offset_right = 1113.0
+offset_bottom = 150.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_wkaif")
+theme_override_font_sizes/font_size = 100
+text = "  MUVIE"
+
+[node name="Label2" type="Label" parent="." unique_id=1832862587]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 146.0
+offset_right = 654.0
+offset_bottom = 621.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("3_gmqpn")
+theme_override_font_sizes/font_size = 25
+text = "Competirán un jugador contra otro (1 vs 1). 
+
+Cada color del casillero representa un juego: violeta = spotle, celeste = framed, rosa = harmonies. Las explicaciones de los mismos estarán siempre disponibles cuando jueges, si no tambien estarán acá
+
+Hay 3 turnos máximo por jugador.
+
+Si caes en un casillero con estrella, tendrás más intentos de adivinar. Si caes en el gris, te tocará aleatoriamente un juego y en caso de perderlo retrocederás al casillero anterior"
+autowrap_mode = 3
+
+[node name="Aguantescorsese" type="Sprite2D" parent="." unique_id=1538458548]
+position = Vector2(895, 278)
+scale = Vector2(0.43405163, 0.42696622)
+texture = ExtResource("4_jyxnn")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1892864630]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 323.0
+offset_right = 987.0
+offset_bottom = 381.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8bjpa")
+
+[node name="Label3" type="Label" parent="." unique_id=595106203]
+layout_mode = 0
+offset_left = 833.0
+offset_top = 334.0
+offset_right = 983.0
+offset_bottom = 396.0
+theme_override_colors/font_color = Color(3.2934102e-05, 0.0010274273, 0.00018698294, 1)
+theme_override_fonts/font = ExtResource("3_gmqpn")
+theme_override_font_sizes/font_size = 15
+text = "me atrapaste, es cine este juegazo"
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="." unique_id=1475250598]
+layout_mode = 0
+offset_left = 815.0
+offset_top = 584.0
+offset_right = 1057.0
+offset_bottom = 629.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_2esov")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/normal = SubResource("StyleBoxFlat_rygrv")
+text = "start game
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

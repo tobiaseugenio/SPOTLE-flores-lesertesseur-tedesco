@@ -72,7 +72,7 @@ horizontal_scroll_mode = 0
 [node name="contenedorIntentos" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=1119350444]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/separation = 15
+theme_override_constants/separation = 30
 
 [node name="intentado" type="Label" parent="." unique_id=248437001]
 layout_mode = 1

@@ -3,6 +3,9 @@ extends Control
 var pelicula_actual: Dictionary
 var frame_actual := 0
 
+var intentosMaximos = 5
+signal juegoTerminado(gano: bool)
+
 func _ready():
 	for i in range(6):
 		var boton = $ContenedorBotones.get_child(i)
@@ -47,8 +50,10 @@ func validar_respuesta(texto: String):
 func juego_terminado(gano: bool):
 	if gano:
 		print("Ganaste!")
+		juegoTerminado.emit(true)
 	else:
 		print("Perdiste - era: ", pelicula_actual["titulo"])
+		juegoTerminado.emit(false)
 		
 
 func actualizar_sugerencias(texto: String):

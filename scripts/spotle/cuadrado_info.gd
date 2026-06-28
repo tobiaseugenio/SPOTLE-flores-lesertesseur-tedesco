@@ -10,6 +10,8 @@ var nuevoEstilo: StyleBoxFlat
 
 func _ready():
 	nuevoEstilo = get_theme_stylebox("panel").duplicate()
+	if ModoJuego.modo == "pelis": 
+		labelResultado.add_theme_font_size_override("font_size", 20)
 	
 func estuvoCerca() -> void:
 	nuevoEstilo.bg_color = COLOR_AMARILLO

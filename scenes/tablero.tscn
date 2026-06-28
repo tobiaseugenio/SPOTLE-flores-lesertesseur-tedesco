@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bpq0egbgq63o5" path="res://ui/assets/framed.png" id="5_qd15a"]
 [ext_resource type="Texture2D" uid="uid://bqqhf63nvc7hp" path="res://ui/assets/harmonies.png" id="6_glehf"]
 [ext_resource type="Texture2D" uid="uid://cwmhksrx6au7h" path="res://ui/assets/spotle.png" id="7_s18i8"]
+[ext_resource type="PackedScene" uid="uid://c6478qq7675c8" path="res://scenes/player_2.tscn" id="9_dmhic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15a0m"]
 texture = ExtResource("1_1fh1m")
@@ -300,7 +301,7 @@ tile_set = SubResource("TileSet_ee34m")
 [node name="estrellas" type="TileMapLayer" parent="." unique_id=946824659]
 position = Vector2(-1.9073486e-06, 0)
 scale = Vector2(1.0000001, 1)
-tile_map_data = PackedByteArray("AAAaABAAAAAAAAAAAAALAAoAAAAAAAAAAAAFAAQAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAaABAAAAAAAAAAAAALAAoAAAAAAAAAAAAFAAQAAAAAAAAAAAARAAoAAAAAAAAAAAAOAAQAAAAAAAAAAAACAAcAAAAAAAAAAAAIABAAAAAAAAAAAAAgAAoAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_dmhic")
 
 [node name="Path2D" type="Path2D" parent="." unique_id=233549036]
@@ -316,6 +317,8 @@ position = Vector2(12.003889, -0.95218366)
 
 [node name="PathFollow2D-P2" type="PathFollow2D" parent="Path2D" unique_id=273673007]
 position = Vector2(63.959618, 535.29236)
+
+[node name="player_2" parent="Path2D/PathFollow2D-P2" unique_id=1682792202 instance=ExtResource("9_dmhic")]
 
 [node name="dado" parent="." unique_id=269272119 instance=ExtResource("4_4sva1")]
 position = Vector2(71, 436)

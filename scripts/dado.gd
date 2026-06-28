@@ -19,7 +19,7 @@ func _on_input_event(viewport, event, shape_idx):
 
 func tirarDado():
 	dadoFueTirado = true
-	var numRandom = randi_range(5, 6)
+	var numRandom = randi_range(1, 6)
 	
 	spriteDado.visible = false
 	colorRect.visible = true

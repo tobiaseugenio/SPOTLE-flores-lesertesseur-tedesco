@@ -2,10 +2,9 @@
 
 [ext_resource type="Script" uid="uid://b04v0prrgf3cq" path="res://scripts/spotle/fila_intento_p.gd" id="1_5qrro"]
 [ext_resource type="PackedScene" uid="uid://bvaxf3fmctdcr" path="res://scenes/spotle/cuadrado_info.tscn" id="2_5qrro"]
+[ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="2_cpngc"]
+[ext_resource type="FontFile" uid="uid://c1pcwpafxkumy" path="res://ui/fonts/Gotham-Light.otf" id="3_0ne2y"]
 [ext_resource type="PackedScene" uid="uid://dri21wxdny70q" path="res://scenes/spotle/cuadrado_info_p.tscn" id="3_5qrro"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5u6q"]
-corner_detail = 15
 
 [node name="filaIntentoP" type="VBoxContainer" unique_id=1097431565]
 offset_right = 411.5
@@ -20,18 +19,17 @@ layout_mode = 2
 theme_override_constants/separation = 16
 alignment = 1
 
-[node name="Panel" type="Panel" parent="HBoxContainer" unique_id=1076117802]
-custom_minimum_size = Vector2(50, 50)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_w5u6q")
-
 [node name="Label" type="Label" parent="HBoxContainer" unique_id=1348483454]
 layout_mode = 2
-text = "NOMBRE ARTISTA"
+theme_override_fonts/font = ExtResource("2_cpngc")
+theme_override_font_sizes/font_size = 24
+text = "NOMBRE PELICULA"
 
 [node name="Label2" type="Label" parent="HBoxContainer" unique_id=3303190]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_0ne2y")
 text = "|  CLASIFICACION"
+vertical_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=892182606]
 layout_mode = 2

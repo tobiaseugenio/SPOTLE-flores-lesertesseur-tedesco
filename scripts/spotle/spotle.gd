@@ -8,7 +8,9 @@ var escenaFila
 var listaItems
 var artistaSecreto: Dictionary
 var intentos = 0
+var intentosMaximos = 10
 var artistasIntentados: Array = []
+signal juegoTerminado(gano: bool)
 
 func _ready():
 	if ModoJuego.modo == "pelis":
@@ -19,6 +21,10 @@ func _ready():
 		escenaFila = preload("res://scenes/spotle/fila_intento.tscn")
 		listaItems = Artistas.LISTA_ARTISTAS
 		artistaSecreto = SelectorArtista.elegirArtista()
+		
+	intentosMaximos += GestorJuego.intentosExtra
+	GestorJuego.intentosExtra = 0
+	
 	lista.hide()
 	$intentado.hide()
 	$ganasteCartel.hide()
@@ -48,9 +54,11 @@ func _on_item_list_item_selected(index: int) -> void:
 	
 	if nombre == artistaSecreto["nombre"]:
 		$ganasteCartel.show()
-	elif intentos >= 10:
-		$perdisteCartel.show()
-		$perdisteCartel.mostrarNombreSecreto(artistaSecreto["nombre"])
+		GestorJuego.ganoElJuego = true
+		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
+		juegoTerminado.emit(true)
+		queue_free()
+		return
 	
 	if nombre in artistasIntentados:
 		$intentado.show()
@@ -76,3 +84,12 @@ func _on_item_list_item_selected(index: int) -> void:
 	
 	barraBusq.text = ""
 	lista.hide()
+	
+	if intentos >= intentosMaximos:
+		$perdisteCartel.show()
+		await get_tree().create_timer(2.0).timeout
+		GestorJuego.ganoElJuego = false
+		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
+		juegoTerminado.emit(false)
+		queue_free()
+		return

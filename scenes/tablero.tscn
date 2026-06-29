@@ -313,7 +313,7 @@ curve = SubResource("Curve2D_afy4m")
 position = Vector2(63.959618, 535.29236)
 
 [node name="player1" parent="Path2D/PathFollow2D-P1" unique_id=880289305 instance=ExtResource("3_wnuxq")]
-position = Vector2(12.003889, -0.95218366)
+position = Vector2(12.004, 0)
 
 [node name="PathFollow2D-P2" type="PathFollow2D" parent="Path2D" unique_id=273673007]
 position = Vector2(63.959618, 535.29236)

@@ -9,9 +9,9 @@
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=972581184]
 offset_left = 243.0
-offset_top = 165.0
+offset_top = 133.0
 offset_right = 859.0
-offset_bottom = 579.0
+offset_bottom = 547.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
 columns = 4
@@ -109,6 +109,15 @@ Seleccioná 4 cuadrados y luego presioná el botón de verificar para adivinar
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="verificar" type="Button" parent="." unique_id=813729111]
+offset_left = 443.0
+offset_top = 578.0
+offset_right = 660.0
+offset_bottom = 637.0333
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "VERIFICAR"
 
 [node name="VerificadorEstadoBotones" type="Node" parent="." unique_id=1830057386]
 script = ExtResource("1_22aiq")

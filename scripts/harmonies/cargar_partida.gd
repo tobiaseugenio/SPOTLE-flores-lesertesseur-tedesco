@@ -1,16 +1,21 @@
 extends Node
 
 var categoriasActivas = []
+@onready var botones = $"../GridContainer".get_children()
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	cargarPartida()
 
 func cargarPartida():
-	var categorias = CategoriasHarmonies.CATEGORIAS_HARMONIES
-	categorias.pick_random()
-	categoriasActivas = categorias
+	var todasLasCategorias = CategoriasHarmonies.CATEGORIAS_HARMONIES
+	categoriasActivas = todasLasCategorias.slice(0, 4)
+	
+	var opcionesMezcladas = []
+	for categoria in categoriasActivas:
+		opcionesMezcladas.append_array(categoria["opciones"])
+		
+	opcionesMezcladas.shuffle()
+	
+	for i in range(botones.size()):
+		if botones[i] is Button:
+			botones[i].text = opcionesMezcladas[i]

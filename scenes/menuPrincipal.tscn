@@ -40,9 +40,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rom4x")
 
 [node name="Label" type="Label" parent="." unique_id=1798005231]
 layout_mode = 0
-offset_left = -304.0
+offset_left = -307.0
 offset_top = 293.0
-offset_right = 848.0
+offset_right = 845.0
 offset_bottom = 459.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_haamj")
@@ -59,7 +59,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -535.0
 offset_top = 117.0
-offset_right = -342.0
+offset_right = -328.0
 offset_bottom = 161.5
 grow_horizontal = 2
 grow_vertical = 2

@@ -1,7 +1,8 @@
 extends Node2D
-
 @onready var pathFollow_p1 = $"Path2D/PathFollow2D-P1"
 @onready var pathFollow_p2 = $"Path2D/PathFollow2D-P2"
+@onready var spriteP1 = $"Path2D/PathFollow2D-P1/player1/Sprite2D"
+@onready var spriteP2 = $"Path2D/PathFollow2D-P2/player_2/Sprite2D"
 var casilleroActual: int = 0 
 var casilleroAnterior: int = 0
 var turnoP1: bool = true
@@ -18,6 +19,9 @@ const TAM_PXS = 32
 const TAM_CASILLERO = TAM_PXS * 3#pq por ahora ocupa 3 cuadrados cada casillerito
 
 func _ready():
+	spriteP1.texture = load(GestorJuego.texturaP1)
+	spriteP2.texture = load(GestorJuego.texturaP2)
+	
 	turnoP1 = GestorJuego.turnoP1
 	if !GestorJuego.ganoElJuego:
 		turnoP1 = !turnoP1

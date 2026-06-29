@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://c6478qq7675c8"]
 
-[ext_resource type="Texture2D" uid="uid://diaj5cg3p7mo5" path="res://ui/assets/dicaprio.png" id="1_l6tho"]
-
 [node name="player_2" type="Node2D" unique_id=1682792202]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=37747192]
 position = Vector2(-2, -20.25)
 scale = Vector2(0.3733333, 0.2988889)
-texture = ExtResource("1_l6tho")

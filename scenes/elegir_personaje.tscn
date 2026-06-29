@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://cu3k4064qhjbg"]
+
+[ext_resource type="FontFile" uid="uid://c8heljnb767l7" path="res://ui/fonts/Gotham-Bold.otf" id="1_fe54n"]
+[ext_resource type="Script" uid="uid://5pgj3os3tx6q" path="res://scripts/elegir_personaje.gd" id="1_rmbvt"]
+[ext_resource type="FontFile" uid="uid://bjbnqj4whwiee" path="res://ui/fonts/GothamLightItalic.ttf" id="2_pnyhx"]
+[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="3_hiks7"]
+[ext_resource type="Texture2D" uid="uid://dsjwfonooe0jr" path="res://ui/personajes/taylorG.png" id="4_q3muj"]
+[ext_resource type="Texture2D" uid="uid://cep5shoxvytev" path="res://ui/personajes/kurtG.png" id="5_rmbvt"]
+[ext_resource type="Texture2D" uid="uid://cl8ey22in7l4s" path="res://ui/personajes/taylorG-disabled.png" id="6_fve38"]
+[ext_resource type="Texture2D" uid="uid://beqluy5x20f2e" path="res://ui/personajes/michaelG.png" id="6_swvdh"]
+[ext_resource type="Texture2D" uid="uid://b7aiff3kud7he" path="res://ui/personajes/kurtG-disabled.png" id="8_drqbf"]
+[ext_resource type="Texture2D" uid="uid://cu3dw4kdwud3q" path="res://ui/personajes/taxidriverG.png" id="8_swvdh"]
+[ext_resource type="Texture2D" uid="uid://bod6uylcs0ta" path="res://ui/personajes/killbillG.png" id="9_h6tgq"]
+[ext_resource type="Texture2D" uid="uid://5hdo6qjm41v7" path="res://ui/personajes/jokerG.png" id="10_pd7sh"]
+[ext_resource type="Texture2D" uid="uid://cws3gnhqq6eaa" path="res://ui/personajes/michaelG-disabled.png" id="10_x21uv"]
+[ext_resource type="Texture2D" uid="uid://c7rjfbvglws4k" path="res://ui/personajes/taxidriverG-disabled.png" id="12_7jqsm"]
+[ext_resource type="Texture2D" uid="uid://b6kao2fn0nldr" path="res://ui/personajes/killbillG-disabled.png" id="14_xfkyv"]
+[ext_resource type="Texture2D" uid="uid://dogc78rn857f8" path="res://ui/personajes/jokerG-disabled.png" id="16_ku46y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6tgq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rmbvt"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pd7sh"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_swvdh"]
+bg_color = Color(0.05882353, 0.05882353, 0.05882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87sdh"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+
+[node name="elegirPersonaje" type="Control" unique_id=1171209931]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rmbvt")
+
+[node name="Panel" type="Panel" parent="." unique_id=558860588]
+layout_mode = 0
+offset_right = 1116.0
+offset_bottom = 672.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_h6tgq")
+
+[node name="titulo" type="Label" parent="." unique_id=105995653]
+layout_mode = 0
+offset_right = 1112.0
+offset_bottom = 92.0
+theme_override_fonts/font = ExtResource("1_fe54n")
+theme_override_font_sizes/font_size = 30
+text = "PLAYER 1 -  Elija su avatar !"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=836588586]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 50.0
+offset_right = 1114.0
+offset_bottom = 107.0
+theme_override_fonts/font = ExtResource("2_pnyhx")
+theme_override_font_sizes/font_size = 20
+text = "toca sobre el mismo para que se te asigne :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnMusica" type="Button" parent="." unique_id=409882754]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 104.0
+offset_right = 532.0
+offset_bottom = 135.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hiks7")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rmbvt")
+text = "musica"
+
+[node name="btnPelis" type="Button" parent="." unique_id=1492633111]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 103.0
+offset_right = 691.0
+offset_bottom = 134.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_hiks7")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_pd7sh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_swvdh")
+text = "pelis"
+
+[node name="seccionMusica" type="HBoxContainer" parent="." unique_id=814374858]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 165.0
+offset_right = 1315.0
+offset_bottom = 797.0
+theme_override_constants/separation = 100
+
+[node name="taylor" type="TextureButton" parent="seccionMusica" unique_id=1120429713]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("4_q3muj")
+texture_disabled = ExtResource("6_fve38")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="kurt" type="TextureButton" parent="seccionMusica" unique_id=2025141442]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+texture_normal = ExtResource("5_rmbvt")
+texture_disabled = ExtResource("8_drqbf")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="michael" type="TextureButton" parent="seccionMusica" unique_id=1026466012]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("6_swvdh")
+texture_disabled = ExtResource("10_x21uv")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="seccionPelis" type="HBoxContainer" parent="." unique_id=1178122494]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 279.0
+offset_right = 1239.0
+offset_bottom = 704.0
+theme_override_constants/separation = 150
+
+[node name="deniro" type="TextureButton" parent="seccionPelis" unique_id=1198519397]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("8_swvdh")
+texture_disabled = ExtResource("12_7jqsm")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="thurman" type="TextureButton" parent="seccionPelis" unique_id=567678964]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+texture_normal = ExtResource("9_h6tgq")
+texture_disabled = ExtResource("14_xfkyv")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="ledger" type="TextureButton" parent="seccionPelis" unique_id=1558024725]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+texture_normal = ExtResource("10_pd7sh")
+texture_disabled = ExtResource("16_ku46y")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="btnEmpezar" type="Button" parent="." unique_id=1468964492]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.5
+offset_top = -66.0
+offset_right = 169.5
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_fe54n")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_87sdh")
+text = "empezar partida"
+
+[connection signal="pressed" from="btnMusica" to="." method="_on_btn_musica_pressed"]
+[connection signal="pressed" from="btnPelis" to="." method="_on_btn_pelis_pressed"]
+[connection signal="pressed" from="seccionMusica/taylor" to="." method="_on_taylor_pressed"]
+[connection signal="pressed" from="btnEmpezar" to="." method="_on_btn_empezar_pressed"]

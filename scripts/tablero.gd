@@ -14,7 +14,7 @@ const CASILLEROS = [
 	"normal", "spotle", "framedEstrella", "harmonies", "spotle", "framed", "spotle", "harmonies", "framedEstrella", 
 	"harmonies", "harmonies", "malo", "spotleEstrella", "malo", "malo", "framed", "spotle", "harmoniesEstrella", 
 	"framed", "spotleEstrella", "framed", "harmonies", "malo", "spotleEstrella", "framed", "harmoniesEstrella", "spotle", 
-	"harmonies", "framedEstrella", "spotle", "harmonies", "spotle", "framed", "framed" ]
+	"harmonies", "framedEstrella", "spotle", "harmonies", "spotle", "framed", "framed", "fin" ]
 const TAM_PXS = 32 
 const TAM_CASILLERO = TAM_PXS * 3#pq por ahora ocupa 3 cuadrados cada casillerito
 
@@ -22,11 +22,19 @@ func _ready():
 	spriteP1.texture = load(GestorJuego.texturaP1)
 	spriteP2.texture = load(GestorJuego.texturaP2)
 	
+	var tamDeseado := Vector2(96, 96)
+	var tamP1 = spriteP1.texture.get_size()
+	spriteP1.scale = tamDeseado / tamP1
+	var tamP2 = spriteP2.texture.get_size()
+	spriteP2.scale = tamDeseado / tamP2
+	
 	turnoP1 = GestorJuego.turnoP1
-	if !GestorJuego.ganoElJuego:
+	if !GestorJuego.ganoElJuego or GestorJuego.turnosRestantes <= 0:
 		turnoP1 = !turnoP1
 		GestorJuego.turnoP1 = turnoP1
 		GestorJuego.turnosRestantes = 3
+	GestorJuego.ganoElJuego = false 
+	
 	$dado.dado_tirado.connect(_on_dado_dado_tirado)
 	casilleroActual = GestorJuego.posicionP1 if turnoP1 else GestorJuego.posicionP2
 	pathFollow_p1.progress = GestorJuego.posicionP1 * TAM_CASILLERO
@@ -52,11 +60,11 @@ func evaluarCasillero(tipo: String):
 		get_tree().change_scene_to_file("res://scenes/framed/framed.tscn")
 	elif tipo == "harmonies":
 		get_tree().change_scene_to_file("res://scenes/harmonies/harmonies.tscn")
+	elif tipo == "fin":
+		get_tree().change_scene_to_file("res://scenes/ganasteFin.tscn")
 		
 	GestorJuego.turnosRestantes -= 1
-	if GestorJuego.turnosRestantes == 0:
-		GestorJuego.turnoP1 = !turnoP1
-		
+	
 func moverJugador(num: int):
 	casilleroAnterior = casilleroActual
 	casilleroActual = min(casilleroActual + num, 32)

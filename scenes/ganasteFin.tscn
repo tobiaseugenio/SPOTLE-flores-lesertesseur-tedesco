@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://d02ili0u1o0pj"]
+
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_vl1wf"]
+[ext_resource type="FontFile" uid="uid://c1pcwpafxkumy" path="res://ui/fonts/Gotham-Light.otf" id="2_v8the"]
+[ext_resource type="Texture2D" uid="uid://bv1hewyl44t6h" path="res://ui/assets/00b6a272348e9373046d23bed349ff5a.jpg" id="3_v8the"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ifhpq"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control" unique_id=1460952168]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=418449583]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ifhpq")
+
+[node name="Label" type="Label" parent="." unique_id=939980125]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 47.0
+offset_right = 1101.0
+offset_bottom = 274.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("1_vl1wf")
+theme_override_font_sizes/font_size = 100
+text = "FELICIDADES,
+GANASTE!"
+
+[node name="Label2" type="Label" parent="." unique_id=1234479426]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 281.0
+offset_right = 639.0
+offset_bottom = 372.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_v8the")
+theme_override_font_sizes/font_size = 25
+text = "Estan todos muy orgullosos de tus conocimientos elomanos y cinefilos :)"
+autowrap_mode = 3
+
+[node name="00b6a272348e9373046d23Bed349Ff5a" type="Sprite2D" parent="." unique_id=866448466]
+position = Vector2(847.99994, 452)
+scale = Vector2(0.7656249, 0.7702128)
+texture = ExtResource("3_v8the")

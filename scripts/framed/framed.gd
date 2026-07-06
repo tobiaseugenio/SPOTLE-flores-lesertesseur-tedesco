@@ -50,7 +50,10 @@ func validar_respuesta(texto: String):
 func juego_terminado(gano: bool):
 	if gano:
 		print("Ganaste!")
+		GestorJuego.ganoElJuego = gano
+		await get_tree().create_timer(3.0).timeout
 		juegoTerminado.emit(true)
+		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 	else:
 		print("Perdiste - era: ", pelicula_actual["titulo"])
 		juegoTerminado.emit(false)

@@ -16,7 +16,7 @@ const CASILLEROS = [
 	"framed", "spotleEstrella", "framed", "harmonies", "malo", "spotleEstrella", "framed", "harmoniesEstrella", "spotle", 
 	"harmonies", "framedEstrella", "spotle", "harmonies", "spotle", "framed", "framed", "fin" ]
 const TAM_PXS = 32 
-const TAM_CASILLERO = TAM_PXS * 3#pq por ahora ocupa 3 cuadrados cada casillerito
+const TAM_CASILLERO = TAM_PXS * 3
 
 func _ready():
 	spriteP1.texture = load(GestorJuego.texturaP1)

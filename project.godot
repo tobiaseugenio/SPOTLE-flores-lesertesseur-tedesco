@@ -12,7 +12,7 @@ config_version=5
 
 config/name="spotle"
 run/main_scene="uid://cwpn2rff8hylo"
-config/features=PackedStringArray("4.7", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -21,6 +21,8 @@ SelectorArtista="*uid://cjtjr8h85qwm1"
 ModoJuego="*uid://lyball5plkdp"
 Moviesframed="*uid://duxejddm3cj88"
 GestorJuego="*uid://tb6y111u0kqy"
+ModosDeJuego="*uid://b52v122td8tsk"
+Videoclips="*uid://013ia0d2nagg"
 
 [display]
 

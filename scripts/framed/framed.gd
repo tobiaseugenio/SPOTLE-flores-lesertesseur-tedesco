@@ -1,8 +1,8 @@
 extends Control
 
-var pelicula_actual: Dictionary
+var item_actual: Dictionary
 var frame_actual := 0
-
+var items: Array = []
 var intentosMaximos = 5
 signal juegoTerminado(gano: bool)
 
@@ -10,6 +10,14 @@ func _ready():
 	for i in range(6):
 		var boton = $ContenedorBotones.get_child(i)
 		boton.pressed.connect(_on_boton_frame_pressed.bind(i))
+
+	match ModosDeJuego.current_mode:
+		ModosDeJuego.ModosDeJuego.MOVIES:
+			items = Moviesframed.get_all()
+		ModosDeJuego.ModosDeJuego.VIDEOCLIPS:
+			items = Videoclips.get_all()
+
+	items.shuffle()
 	nueva_partida()
 
 func _on_boton_frame_pressed(indice: int):
@@ -17,13 +25,13 @@ func _on_boton_frame_pressed(indice: int):
 	mostrar_frame()
 
 func nueva_partida():
-	pelicula_actual = Moviesframed.movies.pick_random()
+	item_actual = items.pick_random()
 	frame_actual = 0
 	mostrar_frame()
 	actualizar_botones()
 
 func mostrar_frame():
-	var ruta = pelicula_actual["frames"][frame_actual]
+	var ruta = item_actual["frames"][frame_actual]
 	print(ruta)
 	$Foto.texture = load(ruta)
 
@@ -42,22 +50,17 @@ func revelar_siguiente():
 
 func validar_respuesta(texto: String):
 	var intento = texto.strip_edges().to_lower()
-	if intento in pelicula_actual["alternativas"]:
+	if intento in item_actual["alternativas"]:
 		juego_terminado(true)
 	else:
 		revelar_siguiente()
 
 func juego_terminado(gano: bool):
+	GestorJuego.ganoElJuego = gano
+	juegoTerminado.emit(gano)
 	if gano:
-		print("Ganaste!")
-		GestorJuego.ganoElJuego = gano
 		await get_tree().create_timer(3.0).timeout
-		juegoTerminado.emit(true)
-		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
-	else:
-		print("Perdiste - era: ", pelicula_actual["titulo"])
-		juegoTerminado.emit(false)
-		
+	get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 
 func actualizar_sugerencias(texto: String):
 	$ItemList.clear()
@@ -65,9 +68,9 @@ func actualizar_sugerencias(texto: String):
 		$ItemList.visible = false
 		return
 	var hay_resultados := false
-	for peli in Moviesframed.movies:
-		if peli["titulo"].to_lower().contains(texto.to_lower()):
-			$ItemList.add_item(peli["titulo"])
+	for item in items:
+		if item["titulo"].to_lower().contains(texto.to_lower()):
+			$ItemList.add_item(item["titulo"])
 			hay_resultados = true
 	$ItemList.visible = hay_resultados
 

@@ -1,6 +1,9 @@
 extends Node
 
-var movies = [
+static func get_all() -> Array:
+	return movies
+
+const movies = [
 	{
 		"id": "matrix",
 		"titulo": "The Matrix",

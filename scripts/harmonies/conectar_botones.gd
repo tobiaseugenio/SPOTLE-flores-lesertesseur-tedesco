@@ -13,7 +13,7 @@ func conectarBotones():
 	for boton in botones:
 		if boton is Button:
 			#boton.pressed.connect(verificadorEstadoBotones.botonPresionado)
-			verificadorEstadoBotones.botonPresionado(boton)
+			boton.pressed.connect(verificadorEstadoBotones.botonPresionado.bind(boton))
 			#boton.pressed.connect(verificadorEstadoBotones.botonPresionado(boton).bind(boton))	
 
 

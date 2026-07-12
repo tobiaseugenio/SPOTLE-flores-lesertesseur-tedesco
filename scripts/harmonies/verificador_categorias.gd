@@ -4,8 +4,8 @@ extends Node
 @onready var cargarPartida = $"../CargarPartida"
 @onready var botonVerificar= $"../verificar"
 @onready var opcionesElegidas = verificadorEstadoBotones.opcionesElegidas
+@onready var categoriasActivas = cargarPartida.categoriasActivas
 
-var opcionesCorrectas = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,11 +19,20 @@ func verificarCategoria():
 	if opcionesElegidas.size() != 4:
 		print("verificarCategoria -> menos de 4 opcines elegidas")
 		return
+	var opcionesCorrectas = []
+	for boton in opcionesElegidas:
+		opcionesCorrectas.append(boton.text)
+	opcionesCorrectas.sort()
 	
-	for opcion in opcionesElegidas:
-		if opcionesCorrectas.find(opcion):
-			print("elegido correctamente")
+	buscarCategoriaCorrecta(opcionesCorrectas)
 
-func buscarCategoriaCorrecta():
-	for categoria in cargarPartida.categoriasActivas:
-		pass
+func buscarCategoriaCorrecta(opcionesCorrectas: Array):
+	for categoria in categoriasActivas:
+		var opcionCategoriaActiva = categoria.opciones.duplicate()
+		opcionCategoriaActiva.sort()
+		
+		if opcionCategoriaActiva == opcionesCorrectas:
+			print("buscarCategoriaCorrecta -> bien")
+			return
+	
+	print("buscarCategoriaCorrecta -> mal")

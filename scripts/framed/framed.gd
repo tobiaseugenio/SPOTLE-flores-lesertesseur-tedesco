@@ -33,7 +33,11 @@ func nueva_partida():
 func mostrar_frame():
 	var ruta = item_actual["frames"][frame_actual]
 	print(ruta)
-	$Foto.texture = load(ruta)
+	var textura = load(ruta)
+	if textura == null:
+		print("ERROR: no se encontró la imagen en ", ruta)
+		return
+	$Foto.texture = textura
 
 func actualizar_botones():
 	for i in range(6):

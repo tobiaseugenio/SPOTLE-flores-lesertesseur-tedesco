@@ -10,12 +10,12 @@ const movies = [
 		"anio": 1999,
 		"alternativas": ["matrix", "the matrix"],
 		"frames": [
-			"res://fotos/matrix/frame1.png",
-			"res://fotos/matrix/frame2.png",
-			"res://fotos/matrix/frame3.png",
-			"res://fotos/matrix/frame4.png",
-			"res://fotos/matrix/frame5.png",
-			"res://fotos/matrix/frame6.png",
+			"res://fotos/peliculas/matrix/frame1.png",
+			"res://fotos/peliculas/matrix/frame2.png",
+			"res://fotos/peliculas/matrix/frame3.png",
+			"res://fotos/peliculas/matrix/frame4.png",
+			"res://fotos/peliculas/matrix/frame5.png",
+			"res://fotos/peliculas/matrix/frame6.png",
 		]
 	},
 	{
@@ -24,12 +24,12 @@ const movies = [
 		"anio": 2010,
 		"alternativas": ["tangled", "enredados", "rapunzel"],
 		"frames": [
-			"res://fotos/tangled/frame1.png",
-			"res://fotos/tangled/frame2.png",
-			"res://fotos/tangled/frame3.png",
-			"res://fotos/tangled/frame4.png",
-			"res://fotos/tangled/frame5.png",
-			"res://fotos/tangled/frame6.png",
+			"res://fotos/peliculas/tangled/frame1.png",
+			"res://fotos/peliculas/tangled/frame2.png",
+			"res://fotos/peliculas/tangled/frame3.png",
+			"res://fotos/peliculas/tangled/frame4.png",
+			"res://fotos/peliculas/tangled/frame5.png",
+			"res://fotos/peliculas/tangled/frame6.png",
 		]
 	},
 	{
@@ -38,12 +38,12 @@ const movies = [
 		"anio": 1982,
 		"alternativas": ["et", "e.t", "extraterrestre"],
 		"frames": [
-			"res://fotos/et/frame1.png",
-			"res://fotos/et/frame2.png",
-			"res://fotos/et/frame3.png",
-			"res://fotos/et/frame4.png",
-			"res://fotos/et/frame5.png",
-			"res://fotos/et/frame6.png",
+			"res://fotos/peliculas/et/frame1.png",
+			"res://fotos/peliculas/et/frame2.png",
+			"res://fotos/peliculas/et/frame3.png",
+			"res://fotos/peliculas/et/frame4.png",
+			"res://fotos/peliculas/et/frame5.png",
+			"res://fotos/peliculas/et/frame6.png",
 		]
 	},
 	{
@@ -52,12 +52,12 @@ const movies = [
 		"anio": 1975,
 		"alternativas": ["tiburon", "jaws"],
 		"frames": [
-			"res://fotos/tiburon/frame1.png",
-			"res://fotos/tiburon/frame2.png",
-			"res://fotos/tiburon/frame3.png",
-			"res://fotos/tiburon/frame4.png",
-			"res://fotos/tiburon/frame5.png",
-			"res://fotos/tiburon/frame6.png",
+			"res://fotos/peliculas/tiburon/frame1.png",
+			"res://fotos/peliculas/tiburon/frame2.png",
+			"res://fotos/peliculas/tiburon/frame3.png",
+			"res://fotos/peliculas/tiburon/frame4.png",
+			"res://fotos/peliculas/tiburon/frame5.png",
+			"res://fotos/peliculas/tiburon/frame6.png",
 		]
 	},
 	{
@@ -66,12 +66,12 @@ const movies = [
 		"anio": 1972,
 		"alternativas": ["el padrino", "the godfather", "padrino"],
 		"frames": [
-			"res://fotos/el_padrino/frame1.png",
-			"res://fotos/el_padrino/frame2.png",
-			"res://fotos/el_padrino/frame3.png",
-			"res://fotos/el_padrino/fsssrame4.png",
-			"res://fotos/el_padrino/frame5.png",
-			"res://fotos/el_padrino/frame6.png",
+			"res://fotos/peliculas/el_padrino/frame1.png",
+			"res://fotos/peliculas/el_padrino/frame2.png",
+			"res://fotos/peliculas/el_padrino/frame3.png",
+			"res://fotos/peliculas/el_padrino/fsssrame4.png",
+			"res://fotos/peliculas/el_padrino/frame5.png",
+			"res://fotos/peliculas/el_padrino/frame6.png",
 		]
 	},
 	{
@@ -80,12 +80,12 @@ const movies = [
 		"anio": 1997,
 		"alternativas": ["titanic"],
 		"frames": [
-			"res://fotos/titanic/frame1.png",
-			"res://fotos/titanic/frame2.png",
-			"res://fotos/titanic/frame3.png",
-			"res://fotos/titanic/frame4.png",
-			"res://fotos/titanic/frame5.png",
-			"res://fotos/titanic/frame6.png",
+			"res://fotos/peliculas/titanic/frame1.png",
+			"res://fotos/peliculas/titanic/frame2.png",
+			"res://fotos/peliculas/titanic/frame3.png",
+			"res://fotos/peliculas/titanic/frame4.png",
+			"res://fotos/peliculas/titanic/frame5.png",
+			"res://fotos/peliculas/titanic/frame6.png",
 		]
 	},
 	{
@@ -94,12 +94,12 @@ const movies = [
 		"anio": 1994,
 		"alternativas": ["pulp fiction", "pulpfiction"],
 		"frames": [
-			"res://fotos/pulp_fiction/frame1.png",
-			"res://fotos/pulp_fiction/frame2.png",
-			"res://fotos/pulp_fiction/frame3.png",
-			"res://fotos/pulp_fiction/frame4.png",
-			"res://fotos/pulp_fiction/frame5.png",
-			"res://fotos/pulp_fiction/frame6.png",
+			"res://fotos/peliculas/pulp_fiction/frame1.png",
+			"res://fotos/peliculas/pulp_fiction/frame2.png",
+			"res://fotos/peliculas/pulp_fiction/frame3.png",
+			"res://fotos/peliculas/pulp_fiction/frame4.png",
+			"res://fotos/peliculas/pulp_fiction/frame5.png",
+			"res://fotos/peliculas/pulp_fiction/frame6.png",
 		]
 	},
 	{
@@ -108,12 +108,12 @@ const movies = [
 		"anio": 2023,
 		"alternativas": ["elemental","elementos"],
 		"frames": [
-			"res://fotos/elemental/frame1.png",
-			"res://fotos/elemental/frame2.png",
-			"res://fotos/elemental/frame3.png",
-			"res://fotos/elemental/frame4.png",
-			"res://fotos/elemental/frame5.png",
-			"res://fotos/elemental/frame6.png",
+			"res://fotos/peliculas/elemental/frame1.png",
+			"res://fotos/peliculas/elemental/frame2.png",
+			"res://fotos/peliculas/elemental/frame3.png",
+			"res://fotos/peliculas/elemental/frame4.png",
+			"res://fotos/peliculas/elemental/frame5.png",
+			"res://fotos/peliculas/elemental/frame6.png",
 		]
 	},
 	{
@@ -122,12 +122,12 @@ const movies = [
 		"anio": 2001,
 		"alternativas": ["legally blonde", "legalmente rubia"],
 		"frames": [
-			"res://fotos/legally_blonde/frame1.jpeg",
-			"res://fotos/legally_blonde/frame2.jpeg",
-			"res://fotos/legally_blonde/frame3.jpeg",
-			"res://fotos/legally_blonde/frame4.jpeg",
-			"res://fotos/legally_blonde/frame5.jpeg",
-			"res://fotos/legally_blonde/frame6.jpeg",
+			"res://fotos/peliculas/legally_blonde/frame1.jpeg",
+			"res://fotos/peliculas/legally_blonde/frame2.jpeg",
+			"res://fotos/peliculas/legally_blonde/frame3.jpeg",
+			"res://fotos/peliculas/legally_blonde/frame4.jpeg",
+			"res://fotos/peliculas/legally_blonde/frame5.jpeg",
+			"res://fotos/peliculas/legally_blonde/frame6.jpeg",
 		]
 	},
 	{
@@ -136,12 +136,12 @@ const movies = [
 		"anio": 2014,
 		"alternativas": ["interstellar", "interestelar"],
 		"frames": [
-			"res://fotos/interstellar/frame1.jpeg",
-			"res://fotos/interstellar/frame2.jpeg",
-			"res://fotos/interstellar/frame3.jpeg",
-			"res://fotos/interstellar/frame4.jpeg",
-			"res://fotos/interstellar/frame5.jpeg",
-			"res://fotos/interstellar/frame6.jpeg",
+			"res://fotos/peliculas/interstellar/frame1.jpeg",
+			"res://fotos/peliculas/interstellar/frame2.jpeg",
+			"res://fotos/peliculas/interstellar/frame3.jpeg",
+			"res://fotos/peliculas/interstellar/frame4.jpeg",
+			"res://fotos/peliculas/interstellar/frame5.jpeg",
+			"res://fotos/peliculas/interstellar/frame6.jpeg",
 		]
 	},
 	{
@@ -150,12 +150,12 @@ const movies = [
 		"anio": 2013,
 		"alternativas": ["her", "ella"],
 		"frames": [
-			"res://fotos/her/frame1.jpeg",
-			"res://fotos/her/frame2.jpeg",
-			"res://fotos/her/frame3.jpeg",
-			"res://fotos/her/frame4.jpeg",
-			"res://fotos/her/frame5.jpeg",
-			"res://fotos/her/frame6.jpeg",
+			"res://fotos/peliculas/her/frame1.jpeg",
+			"res://fotos/peliculas/her/frame2.jpeg",
+			"res://fotos/peliculas/her/frame3.jpeg",
+			"res://fotos/peliculas/her/frame4.jpeg",
+			"res://fotos/peliculas/her/frame5.jpeg",
+			"res://fotos/peliculas/her/frame6.jpeg",
 		]
 	},
 	{
@@ -164,12 +164,12 @@ const movies = [
 		"anio": 2010,
 		"alternativas": ["inception", "el origen"],
 		"frames": [
-			"res://fotos/inception/frame1.jpeg",
-			"res://fotos/inception/frame2.jpeg",
-			"res://fotos/inception/frame3.jpeg",
-			"res://fotos/inception/frame4.jpeg",
-			"res://fotos/inception/frame5.jpeg",
-			"res://fotos/inception/frame6.jpeg",
+			"res://fotos/peliculas/inception/frame1.jpeg",
+			"res://fotos/peliculas/inception/frame2.jpeg",
+			"res://fotos/peliculas/inception/frame3.jpeg",
+			"res://fotos/peliculas/inception/frame4.jpeg",
+			"res://fotos/peliculas/inception/frame5.jpeg",
+			"res://fotos/peliculas/inception/frame6.jpeg",
 		]
 	},
 	{
@@ -178,12 +178,12 @@ const movies = [
 		"anio": 2013,
 		"alternativas": ["gravity", "gravedad"],
 		"frames": [
-			"res://fotos/gravity/frame1.jpeg",
-			"res://fotos/gravity/frame2.jpeg",
-			"res://fotos/gravity/frame3.jpeg",
-			"res://fotos/gravity/frame4.jpeg",
-			"res://fotos/gravity/frame5.jpeg",
-			"res://fotos/gravity/frame6.jpeg",
+			"res://fotos/peliculas/gravity/frame1.jpeg",
+			"res://fotos/peliculas/gravity/frame2.jpeg",
+			"res://fotos/peliculas/gravity/frame3.jpeg",
+			"res://fotos/peliculas/gravity/frame4.jpeg",
+			"res://fotos/peliculas/gravity/frame5.jpeg",
+			"res://fotos/peliculas/gravity/frame6.jpeg",
 		]
 	},
 	{
@@ -192,12 +192,12 @@ const movies = [
 		"anio": 1994,
 		"alternativas": ["forrest gump", "forrestgump"],
 		"frames": [
-			"res://fotos/forrest_gump/frame1.jpeg",
-			"res://fotos/forrest_gump/frame2.jpeg",
-			"res://fotos/forrest_gump/frame3.jpeg",
-			"res://fotos/forrest_gump/frame4.jpeg",
-			"res://fotos/forrest_gump/frame5.jpeg",
-			"res://fotos/forrest_gump/frame6.jpeg",
+			"res://fotos/peliculas/forrest_gump/frame1.jpeg",
+			"res://fotos/peliculas/forrest_gump/frame2.jpeg",
+			"res://fotos/peliculas/forrest_gump/frame3.jpeg",
+			"res://fotos/peliculas/forrest_gump/frame4.jpeg",
+			"res://fotos/peliculas/forrest_gump/frame5.jpeg",
+			"res://fotos/peliculas/forrest_gump/frame6.jpeg",
 		]
 	},
 	{
@@ -206,12 +206,12 @@ const movies = [
 		"anio": 1986,
 		"alternativas": ["ferris bueller", "ferris buellers day off", "un dia libre de locura"],
 		"frames": [
-			"res://fotos/ferris_bueller/frame1.jpeg",
-			"res://fotos/ferris_bueller/frame2.jpeg",
-			"res://fotos/ferris_bueller/frame3.jpeg",
-			"res://fotos/ferris_bueller/frame4.jpeg",
-			"res://fotos/ferris_bueller/frame5.jpeg",
-			"res://fotos/ferris_bueller/frame6.jpeg",
+			"res://fotos/peliculas/ferris_bueller/frame1.jpeg",
+			"res://fotos/peliculas/ferris_bueller/frame2.jpeg",
+			"res://fotos/peliculas/ferris_bueller/frame3.jpeg",
+			"res://fotos/peliculas/ferris_bueller/frame4.jpeg",
+			"res://fotos/peliculas/ferris_bueller/frame5.jpeg",
+			"res://fotos/peliculas/ferris_bueller/frame6.jpeg",
 		]
 	},
 	{
@@ -220,12 +220,12 @@ const movies = [
 		"anio": 2011,
 		"alternativas": ["wuthering heights", "cumbres borrascosas"],
 		"frames": [
-			"res://fotos/cumbres_borrascosas/frame1.jpeg",
-			"res://fotos/cumbres_borrascosas/frame2.jpeg",
-			"res://fotos/cumbres_borrascosas/frame3.jpeg",
-			"res://fotos/cumbres_borrascosas/frame4.jpeg",
-			"res://fotos/cumbres_borrascosas/frame5.jpeg",
-			"res://fotos/cumbres_borrascosas/frame6.jpeg",
+			"res://fotos/peliculas/cumbres_borrascosas/frame1.jpeg",
+			"res://fotos/peliculas/cumbres_borrascosas/frame2.jpeg",
+			"res://fotos/peliculas/cumbres_borrascosas/frame3.jpeg",
+			"res://fotos/peliculas/cumbres_borrascosas/frame4.jpeg",
+			"res://fotos/peliculas/cumbres_borrascosas/frame5.jpeg",
+			"res://fotos/peliculas/cumbres_borrascosas/frame6.jpeg",
 		]
 	},
 	{
@@ -234,12 +234,12 @@ const movies = [
 		"anio": 2024,
 		"alternativas": ["joker 2", "joker folie a deux", "joker folie à deux"],
 		"frames": [
-			"res://fotos/joker_folie_a_deux/frame1.jpeg",
-			"res://fotos/joker_folie_a_deux/frame2.jpeg",
-			"res://fotos/joker_folie_a_deux/frame3.jpeg",
-			"res://fotos/joker_folie_a_deux/frame4.jpeg",
-			"res://fotos/joker_folie_a_deux/frame5.jpeg",
-			"res://fotos/joker_folie_a_deux/frame6.jpeg",
+			"res://fotos/peliculas/joker_folie_a_deux/frame1.jpeg",
+			"res://fotos/peliculas/joker_folie_a_deux/frame2.jpeg",
+			"res://fotos/peliculas/joker_folie_a_deux/frame3.jpeg",
+			"res://fotos/peliculas/joker_folie_a_deux/frame4.jpeg",
+			"res://fotos/peliculas/joker_folie_a_deux/frame5.jpeg",
+			"res://fotos/peliculas/joker_folie_a_deux/frame6.jpeg",
 		]
 	},
 	{
@@ -248,12 +248,12 @@ const movies = [
 		"anio": 1999,
 		"alternativas": ["notting hill"],
 		"frames": [
-			"res://fotos/notting_hill/frame1.jpeg",
-			"res://fotos/notting_hill/frame2.jpeg",
-			"res://fotos/notting_hill/frame3.jpeg",
-			"res://fotos/notting_hill/frame4.jpeg",
-			"res://fotos/notting_hill/frame5.jpeg",
-			"res://fotos/notting_hill/frame6.jpeg",
+			"res://fotos/peliculas/notting_hill/frame1.jpeg",
+			"res://fotos/peliculas/notting_hill/frame2.jpeg",
+			"res://fotos/peliculas/notting_hill/frame3.jpeg",
+			"res://fotos/peliculas/notting_hill/frame4.jpeg",
+			"res://fotos/peliculas/notting_hill/frame5.jpeg",
+			"res://fotos/peliculas/notting_hill/frame6.jpeg",
 		]
 	},
 	{
@@ -262,12 +262,12 @@ const movies = [
 		"anio": 2014,
 		"alternativas": ["paddington"],
 		"frames": [
-			"res://fotos/paddington/frame1.jpeg",
-			"res://fotos/paddington/frame2.jpeg",
-			"res://fotos/paddington/frame3.jpeg",
-			"res://fotos/paddington/frame4.jpeg",
-			"res://fotos/paddington/frame5.jpeg",
-			"res://fotos/paddington/frame6.jpeg",
+			"res://fotos/peliculas/paddington/frame1.jpeg",
+			"res://fotos/peliculas/paddington/frame2.jpeg",
+			"res://fotos/peliculas/paddington/frame3.jpeg",
+			"res://fotos/peliculas/paddington/frame4.jpeg",
+			"res://fotos/peliculas/paddington/frame5.jpeg",
+			"res://fotos/peliculas/paddington/frame6.jpeg",
 		]
 	},
 	{
@@ -276,12 +276,12 @@ const movies = [
 		"anio": 2019,
 		"alternativas": ["parasite", "parasito", "parasitos"],
 		"frames": [
-			"res://fotos/parasite/frame1.jpeg",
-			"res://fotos/parasite/frame2.jpeg",
-			"res://fotos/parasite/frame3.jpeg",
-			"res://fotos/parasite/frame4.jpeg",
-			"res://fotos/parasite/frame5.jpeg",
-			"res://fotos/parasite/frame6.jpeg",
+			"res://fotos/peliculas/parasite/frame1.jpeg",
+			"res://fotos/peliculas/parasite/frame2.jpeg",
+			"res://fotos/peliculas/parasite/frame3.jpeg",
+			"res://fotos/peliculas/parasite/frame4.jpeg",
+			"res://fotos/peliculas/parasite/frame5.jpeg",
+			"res://fotos/peliculas/parasite/frame6.jpeg",
 		]
 	},
 	{
@@ -290,12 +290,12 @@ const movies = [
 		"anio": 2017,
 		"alternativas": ["pirates of the caribbean", "piratas del caribe", "piratas del caribe 5"],
 		"frames": [
-			"res://fotos/piratas_del_caribe_5/frame1.jpeg",
-			"res://fotos/piratas_del_caribe_5/frame2.jpeg",
-			"res://fotos/piratas_del_caribe_5/frame3.jpeg",
-			"res://fotos/piratas_del_caribe_5/frame4.jpeg",
-			"res://fotos/piratas_del_caribe_5/frame5.jpeg",
-			"res://fotos/piratas_del_caribe_5/frame6.jpeg",
+			"res://fotos/peliculas/piratas_del_caribe_5/frame1.jpeg",
+			"res://fotos/peliculas/piratas_del_caribe_5/frame2.jpeg",
+			"res://fotos/peliculas/piratas_del_caribe_5/frame3.jpeg",
+			"res://fotos/peliculas/piratas_del_caribe_5/frame4.jpeg",
+			"res://fotos/peliculas/piratas_del_caribe_5/frame5.jpeg",
+			"res://fotos/peliculas/piratas_del_caribe_5/frame6.jpeg",
 		]
 	},
 	{
@@ -304,12 +304,12 @@ const movies = [
 		"anio": 2019,
 		"alternativas": ["pokemon", "detective pikachu", "pikachu"],
 		"frames": [
-			"res://fotos/pokemon/frame1.jpeg",
-			"res://fotos/pokemon/frame2.jpeg",
-			"res://fotos/pokemon/frame3.jpeg",
-			"res://fotos/pokemon/frame4.jpeg",
-			"res://fotos/pokemon/frame5.jpeg",
-			"res://fotos/pokemon/frame6.jpeg",
+			"res://fotos/peliculas/pokemon/frame1.jpeg",
+			"res://fotos/peliculas/pokemon/frame2.jpeg",
+			"res://fotos/peliculas/pokemon/frame3.jpeg",
+			"res://fotos/peliculas/pokemon/frame4.jpeg",
+			"res://fotos/peliculas/pokemon/frame5.jpeg",
+			"res://fotos/peliculas/pokemon/frame6.jpeg",
 		]
 	},
 	{
@@ -318,12 +318,12 @@ const movies = [
 		"anio": 1996,
 		"alternativas": ["romeo and juliet", "romeo y julieta", "romeo + juliet"],
 		"frames": [
-			"res://fotos/romeo_y_julieta/frame1.jpeg",
-			"res://fotos/romeo_y_julieta/frame2.jpeg",
-			"res://fotos/romeo_y_julieta/frame3.jpeg",
-			"res://fotos/romeo_y_julieta/frame4.jpeg",
-			"res://fotos/romeo_y_julieta/frame5.jpeg",
-			"res://fotos/romeo_y_julieta/frame6.jpeg",
+			"res://fotos/peliculas/romeo_y_julieta/frame1.jpeg",
+			"res://fotos/peliculas/romeo_y_julieta/frame2.jpeg",
+			"res://fotos/peliculas/romeo_y_julieta/frame3.jpeg",
+			"res://fotos/peliculas/romeo_y_julieta/frame4.jpeg",
+			"res://fotos/peliculas/romeo_y_julieta/frame5.jpeg",
+			"res://fotos/peliculas/romeo_y_julieta/frame6.jpeg",
 		]
 	},
 	{
@@ -332,12 +332,12 @@ const movies = [
 		"anio": 1983,
 		"alternativas": ["scarface", "caracortada"],
 		"frames": [
-			"res://fotos/scarface/frame1.jpeg",
-			"res://fotos/scarface/frame2.jpeg",
-			"res://fotos/scarface/frame3.jpeg",
-			"res://fotos/scarface/frame4.jpeg",
-			"res://fotos/scarface/frame5.jpeg",
-			"res://fotos/scarface/frame6.jpeg",
+			"res://fotos/peliculas/scarface/frame1.jpeg",
+			"res://fotos/peliculas/scarface/frame2.jpeg",
+			"res://fotos/peliculas/scarface/frame3.jpeg",
+			"res://fotos/peliculas/scarface/frame4.jpeg",
+			"res://fotos/peliculas/scarface/frame5.jpeg",
+			"res://fotos/peliculas/scarface/frame6.jpeg",
 		]
 	},
 	{
@@ -346,12 +346,12 @@ const movies = [
 		"anio": 1991,
 		"alternativas": ["terminator 2", "terminator", "el dia del juicio final"],
 		"frames": [
-			"res://fotos/terminator_2/frame1.jpeg",
-			"res://fotos/terminator_2/frame2.jpeg",
-			"res://fotos/terminator_2/frame3.jpeg",
-			"res://fotos/terminator_2/frame4.jpeg",
-			"res://fotos/terminator_2/frame5.jpeg",
-			"res://fotos/terminator_2/frame6.jpeg",
+			"res://fotos/peliculas/terminator_2/frame1.jpeg",
+			"res://fotos/peliculas/terminator_2/frame2.jpeg",
+			"res://fotos/peliculas/terminator_2/frame3.jpeg",
+			"res://fotos/peliculas/terminator_2/frame4.jpeg",
+			"res://fotos/peliculas/terminator_2/frame5.jpeg",
+			"res://fotos/peliculas/terminator_2/frame6.jpeg",
 		]
 	},
 	{
@@ -360,12 +360,12 @@ const movies = [
 		"anio": 2013,
 		"alternativas": ["the moment", "el momento"],
 		"frames": [
-			"res://fotos/the_moment/frame1.jpeg",
-			"res://fotos/the_moment/frame2.jpeg",
-			"res://fotos/the_moment/frame3.jpeg",
-			"res://fotos/the_moment/frame4.jpeg",
-			"res://fotos/the_moment/frame5.jpeg",
-			"res://fotos/the_moment/frame6.jpeg",
+			"res://fotos/peliculas/the_moment/frame1.jpeg",
+			"res://fotos/peliculas/the_moment/frame2.jpeg",
+			"res://fotos/peliculas/the_moment/frame3.jpeg",
+			"res://fotos/peliculas/the_moment/frame4.jpeg",
+			"res://fotos/peliculas/the_moment/frame5.jpeg",
+			"res://fotos/peliculas/the_moment/frame6.jpeg",
 		]
 	},
 	{
@@ -374,12 +374,12 @@ const movies = [
 		"anio": 1998,
 		"alternativas": ["the truman show", "truman show", "el show de truman"],
 		"frames": [
-			"res://fotos/the_truman_show/frame1.jpeg",
-			"res://fotos/the_truman_show/frame2.jpeg",
-			"res://fotos/the_truman_show/frame3.jpeg",
-			"res://fotos/the_truman_show/frame4.jpeg",
-			"res://fotos/the_truman_show/frame5.jpeg",
-			"res://fotos/the_truman_show/frame6.jpeg",
+			"res://fotos/peliculas/the_truman_show/frame1.jpeg",
+			"res://fotos/peliculas/the_truman_show/frame2.jpeg",
+			"res://fotos/peliculas/the_truman_show/frame3.jpeg",
+			"res://fotos/peliculas/the_truman_show/frame4.jpeg",
+			"res://fotos/peliculas/the_truman_show/frame5.jpeg",
+			"res://fotos/peliculas/the_truman_show/frame6.jpeg",
 		]
 	},
 	{
@@ -388,12 +388,12 @@ const movies = [
 		"anio": 1986,
 		"alternativas": ["top gun", "topgun"],
 		"frames": [
-			"res://fotos/top gun/frame1.jpeg",
-			"res://fotos/top gun/frame2.jpeg",
-			"res://fotos/top gun/frame3.jpeg",
-			"res://fotos/top gun/frame4.jpeg",
-			"res://fotos/top gun/frame5.jpeg",
-			"res://fotos/top gun/frame6.jpeg",
+			"res://fotos/peliculas/top gun/frame1.jpeg",
+			"res://fotos/peliculas/top gun/frame2.jpeg",
+			"res://fotos/peliculas/top gun/frame3.jpeg",
+			"res://fotos/peliculas/top gun/frame4.jpeg",
+			"res://fotos/peliculas/top gun/frame5.jpeg",
+			"res://fotos/peliculas/top gun/frame6.jpeg",
 		]
 	},
 ]

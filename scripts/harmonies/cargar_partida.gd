@@ -2,6 +2,7 @@ extends Node
 
 var categoriasActivas = []
 @onready var botones = $"../GridContainer".get_children()
+@export var intentosRestantes = 4
 
 func _ready() -> void:
 	cargarPartida()

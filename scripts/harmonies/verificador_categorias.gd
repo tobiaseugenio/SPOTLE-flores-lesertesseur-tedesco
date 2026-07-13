@@ -36,3 +36,4 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 			return
 	
 	print("buscarCategoriaCorrecta -> mal")
+	cargarPartida.intentosRestantes -= 1

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cy2a1lp5ca356" path="res://scripts/harmonies/conectar_botones.gd" id="2_nkepk"]
 [ext_resource type="Script" uid="uid://c2ukkd8m0vij2" path="res://scripts/harmonies/cargar_partida.gd" id="4_d05f5"]
 [ext_resource type="Script" uid="uid://bl8b52ktse2ya" path="res://scripts/harmonies/verificador_categorias.gd" id="5_on7rg"]
+[ext_resource type="Script" uid="uid://u1q0kgxjv3iv" path="res://scripts/harmonies/intentos_restantes.gd" id="6_eehc5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_on7rg"]
 bg_color = Color(0.654232, 0.6542321, 0.65423197, 1)
@@ -148,16 +149,22 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
 toggle_mode = true
 text = "Texto de ejemplo"
 
-[node name="intentosRestantes" type="Label" parent="." unique_id=1994670812]
-offset_left = 463.0
-offset_top = 530.0
-offset_right = 635.0
-offset_bottom = 562.0
-size_flags_horizontal = 4
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1700307138]
+offset_left = 462.0
+offset_top = 527.0
+offset_right = 624.0
+offset_bottom = 567.0
+
+[node name="textoIntentosRestantes" type="Label" parent="HBoxContainer" unique_id=1994670812]
+layout_mode = 2
 theme_override_fonts/font = ExtResource("2_l3ncf")
-text = "Intentos Restantes: x"
+text = "Intentos Restantes: "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="intentosRestantes" type="Label" parent="HBoxContainer" unique_id=473136835]
+layout_mode = 2
+text = "prueba"
 
 [node name="instrucciones" type="Label" parent="." unique_id=1366681664]
 offset_left = 246.0
@@ -174,10 +181,10 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="verificar" type="Button" parent="." unique_id=813729111]
-offset_left = 443.0
-offset_top = 578.0
-offset_right = 660.0
-offset_bottom = 637.0333
+offset_left = 441.0
+offset_top = 575.0
+offset_right = 658.0
+offset_bottom = 634.0333
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "VERIFICAR"
@@ -193,3 +200,6 @@ script = ExtResource("4_d05f5")
 
 [node name="VerificadorCategorias" type="Node" parent="." unique_id=1981127383]
 script = ExtResource("5_on7rg")
+
+[node name="IntentosRestantes" type="Node" parent="." unique_id=389822299]
+script = ExtResource("6_eehc5")

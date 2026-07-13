@@ -18,7 +18,7 @@ func botonPresionado(boton: Button):
 	else:
 		sacarOpcion(boton)
 
-	mostrarOpcionesElegidas()
+	#mostrarOpcionesElegidas()
 
 func mostrarOpcionesElegidas():
 	print("----------------------")

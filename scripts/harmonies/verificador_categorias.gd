@@ -6,7 +6,6 @@ extends Node
 @onready var opcionesElegidas = verificadorEstadoBotones.opcionesElegidas
 @onready var categoriasActivas = cargarPartida.categoriasActivas
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	botonVerificar.pressed.connect(verificarCategoria)
@@ -35,11 +34,20 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 			print("buscarCategoriaCorrecta -> bien")
 			bloquearBotones()
 			opcionesElegidas.clear()
-			return
+			
+	if botonesDesabilitados():
+		print("victoria")
 	
+	return
 	print("buscarCategoriaCorrecta -> mal")
 	cargarPartida.intentosRestantes -= 1
 
 func bloquearBotones():
 	for boton in opcionesElegidas:
 		boton.disabled = true
+		
+func botonesDesabilitados() -> bool:
+	for boton in cargarPartida.botones:
+		if boton is Button and not boton.disabled:
+			return false
+	return true

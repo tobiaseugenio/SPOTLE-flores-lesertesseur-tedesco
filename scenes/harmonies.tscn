@@ -2,15 +2,29 @@
 
 [ext_resource type="Script" uid="uid://iobyx830vk6g" path="res://scripts/harmonies/verificador_estado_botones.gd" id="1_22aiq"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_l3ncf"]
+[ext_resource type="FontFile" uid="uid://bly5ijtx5e7px" path="res://ui/fonts/GothamBold.ttf" id="2_m30mv"]
 [ext_resource type="Script" uid="uid://cy2a1lp5ca356" path="res://scripts/harmonies/conectar_botones.gd" id="2_nkepk"]
 [ext_resource type="Script" uid="uid://c2ukkd8m0vij2" path="res://scripts/harmonies/cargar_partida.gd" id="4_d05f5"]
 [ext_resource type="Script" uid="uid://bl8b52ktse2ya" path="res://scripts/harmonies/verificador_categorias.gd" id="5_on7rg"]
 [ext_resource type="Script" uid="uid://u1q0kgxjv3iv" path="res://scripts/harmonies/intentos_restantes.gd" id="6_eehc5"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m30mv"]
+bg_color = Color(0.23, 0.1472, 0.19412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6wvx"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_on7rg"]
-bg_color = Color(0.654232, 0.6542321, 0.65423197, 1)
+bg_color = Color(0.17, 0.17, 0.17, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r8tq"]
+bg_color = Color(0.35031372, 0.35031372, 0.3503137, 1)
 
 [node name="Harmonies" type="Node2D" unique_id=436709089]
+
+[node name="Panel" type="Panel" parent="." unique_id=1948859159]
+offset_right = 1131.0
+offset_bottom = 678.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_m30mv")
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=972581184]
 offset_left = 243.0
@@ -24,128 +38,176 @@ columns = 4
 [node name="Button" type="Button" parent="GridContainer" unique_id=121291312]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button2" type="Button" parent="GridContainer" unique_id=1731379758]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button3" type="Button" parent="GridContainer" unique_id=1185331397]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button4" type="Button" parent="GridContainer" unique_id=620281300]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button5" type="Button" parent="GridContainer" unique_id=310223419]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button6" type="Button" parent="GridContainer" unique_id=1753946212]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button7" type="Button" parent="GridContainer" unique_id=96079068]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button8" type="Button" parent="GridContainer" unique_id=1090171231]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button9" type="Button" parent="GridContainer" unique_id=2059906719]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button10" type="Button" parent="GridContainer" unique_id=333367899]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button11" type="Button" parent="GridContainer" unique_id=1546626090]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button12" type="Button" parent="GridContainer" unique_id=1478697116]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button13" type="Button" parent="GridContainer" unique_id=743852641]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button14" type="Button" parent="GridContainer" unique_id=915900216]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button15" type="Button" parent="GridContainer" unique_id=1804359134]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
 [node name="Button16" type="Button" parent="GridContainer" unique_id=333187878]
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -164,7 +226,10 @@ vertical_alignment = 1
 
 [node name="intentosRestantes" type="Label" parent="HBoxContainer" unique_id=473136835]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_m30mv")
 text = "prueba"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="instrucciones" type="Label" parent="." unique_id=1366681664]
 offset_left = 246.0

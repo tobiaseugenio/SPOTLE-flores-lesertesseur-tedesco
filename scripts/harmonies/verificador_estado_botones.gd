@@ -23,7 +23,7 @@ func botonPresionado(boton: Button):
 func mostrarOpcionesElegidas():
 	print("----------------------")
 	for opcion in opcionesElegidas:
-		print("mostrarOpcionesElegidas -> ", opcion)
+		print("estadoBotones mostrarOpcionesElegidas -> ", opcion)
 	
 func agregarOpcion(boton: Button):
 	if boton in opcionesElegidas:

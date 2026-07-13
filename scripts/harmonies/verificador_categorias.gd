@@ -33,7 +33,13 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 		
 		if opcionCategoriaActiva == opcionesCorrectas:
 			print("buscarCategoriaCorrecta -> bien")
+			bloquearBotones()
+			opcionesElegidas.clear()
 			return
 	
 	print("buscarCategoriaCorrecta -> mal")
 	cargarPartida.intentosRestantes -= 1
+
+func bloquearBotones():
+	for boton in opcionesElegidas:
+		boton.disabled = true

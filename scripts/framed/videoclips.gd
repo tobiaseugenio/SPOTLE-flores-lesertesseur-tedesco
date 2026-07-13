@@ -521,12 +521,12 @@ const videoclips = [
 	"anio": 2022,
 	"alternativas": ["as it was", "harry styles as it was", "harry styles"],
 	"frames": [
-		"res://fotos/videoclips/as_it_was/frame1.png",
-		"res://fotos/videoclips/as_it_was/frame2.png",
-		"res://fotos/videoclips/as_it_was/frame3.png",
-		"res://fotos/videoclips/as_it_was/frame4.png",
-		"res://fotos/videoclips/as_it_was/frame5.png",
-		"res://fotos/videoclips/as_it_was/frame6.png",
+		"res://fotos/videoclips/asitwas/frame1.png",
+		"res://fotos/videoclips/asitwas/frame2.png",
+		"res://fotos/videoclips/asitwas/frame3.png",
+		"res://fotos/videoclips/asitwas/frame4.png",
+		"res://fotos/videoclips/asitwas/frame5.png",
+		"res://fotos/videoclips/asitwas/frame6.png",
 	]
 },
 {

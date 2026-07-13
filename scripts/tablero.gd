@@ -19,9 +19,12 @@ const TAM_PXS = 32
 const TAM_CASILLERO = TAM_PXS * 3
 
 func _ready():
-	spriteP1.texture = load(GestorJuego.texturaP1)
-	spriteP2.texture = load(GestorJuego.texturaP2)
-	
+	var texP1 = load(GestorJuego.texturaP1)
+	var texP2 = load(GestorJuego.texturaP2)
+
+	spriteP1.texture = texP1
+	spriteP2.texture = texP2
+
 	var tamDeseado := Vector2(96, 96)
 	var tamP1 = spriteP1.texture.get_size()
 	spriteP1.scale = tamDeseado / tamP1

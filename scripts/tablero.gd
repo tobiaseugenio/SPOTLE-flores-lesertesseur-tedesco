@@ -47,27 +47,6 @@ func _on_dado_dado_tirado(resultado: int):
 	print("el dado sacó un: ", resultado)
 	moverJugador(resultado)
 	
-func evaluarCasillero(tipo: String):
-	if tipo == "malo":
-		var rutas = ["res://scenes/spotle/spotle.tscn", "res://scenes/framed/framed.tscn" ]
-		var minijuego = load(rutas.pick_random()).instantiate()
-		minijuego.juegoTerminado.connect(_on_perdiste_malo)
-		add_child(minijuego)
-	elif "Estrella" in tipo:
-		if tipo == "spotleEstrella":
-			GestorJuego.intentosExtra = 3
-			get_tree().change_scene_to_file("res://scenes/spotle/decidirSpotle.tscn")
-	elif tipo == "spotle":
-		get_tree().change_scene_to_file("res://scenes/spotle/decidirSpotle.tscn")
-	elif tipo == "framed":
-		get_tree().change_scene_to_file("res://scenes/framed/framed.tscn")
-	elif tipo == "harmonies":
-		get_tree().change_scene_to_file("res://scenes/harmonies/harmonies.tscn")
-	elif tipo == "fin":
-		get_tree().change_scene_to_file("res://scenes/ganasteFin.tscn")
-		
-	GestorJuego.turnosRestantes -= 1
-	
 func moverJugador(num: int):
 	casilleroAnterior = casilleroActual
 	casilleroActual = min(casilleroActual + num, 32)
@@ -87,7 +66,7 @@ func moverJugador(num: int):
 	await tween.finished
 	
 	var tipoCasillero = CASILLEROS[casilleroActual]
-	evaluarCasillero(tipoCasillero)
+	$evaluaCasilleros.evaluar(tipoCasillero, self)
 
 func _on_perdiste_malo(gano: bool):
 	if !gano:

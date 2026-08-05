@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bqqhf63nvc7hp" path="res://ui/assets/harmonies.png" id="6_glehf"]
 [ext_resource type="Texture2D" uid="uid://cwmhksrx6au7h" path="res://ui/assets/spotle.png" id="7_s18i8"]
 [ext_resource type="PackedScene" uid="uid://c6478qq7675c8" path="res://scenes/player_2.tscn" id="9_dmhic"]
+[ext_resource type="Script" uid="uid://k2fj0rk6oq44" path="res://scripts/evaluarCasillero.gd" id="11_qd15a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15a0m"]
 texture = ExtResource("1_1fh1m")
@@ -322,3 +323,6 @@ position = Vector2(63.959618, 535.29236)
 
 [node name="dado" parent="." unique_id=269272119 instance=ExtResource("4_4sva1")]
 position = Vector2(71, 436)
+
+[node name="evaluaCasilleros" type="Node" parent="." unique_id=1981707521]
+script = ExtResource("11_qd15a")

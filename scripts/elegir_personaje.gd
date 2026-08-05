@@ -13,7 +13,6 @@ func _ready():
 	var todosLosBotones = seccionMusica.get_children() + seccionPelis.get_children()
 	for boton in todosLosBotones:
 		if boton is TextureButton:
-			# bind(boton) para q se envíe a sí mismo
 			boton.pressed.connect(seleccionarAvatar.bind(boton))
 			
 	

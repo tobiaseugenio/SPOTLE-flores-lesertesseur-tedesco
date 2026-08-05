@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_45yir"]
 [ext_resource type="Script" uid="uid://ssec4cjvk5t" path="res://scripts/framed/menu.gd" id="1_wx8ly"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_wx8ly"]
+[ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="4_8t60v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t60v"]
 bg_color = Color(0.11764706, 0.28235295, 0.39215687, 1)
@@ -18,6 +19,43 @@ corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mkrrm"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_glehf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s18i8"]
+resource_name = "fade_out"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 1.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.12156863)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8t60v"]
+_data = {
+&"RESET": SubResource("Animation_glehf"),
+&"fade_out": SubResource("Animation_s18i8")
+}
 
 [node name="Menu" type="Control" unique_id=1942626231]
 layout_mode = 3
@@ -97,6 +135,15 @@ offset_left = 213.0
 offset_top = 215.0
 offset_right = 936.0
 offset_bottom = 373.0
+
+[node name="transicion" type="Sprite2D" parent="." unique_id=799416236]
+position = Vector2(573, 105)
+scale = Vector2(1.2770834, 1)
+texture = ExtResource("4_8t60v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=1756920138]
+libraries/ = SubResource("AnimationLibrary_8t60v")
+autoplay = &"fade_out"
 
 [connection signal="pressed" from="VideoclipsButton" to="." method="_on_videoclips_boton_pressed"]
 [connection signal="pressed" from="PelisButton" to="." method="_on_pelis_boton_pressed"]

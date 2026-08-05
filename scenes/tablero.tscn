@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cwmhksrx6au7h" path="res://ui/assets/spotle.png" id="7_s18i8"]
 [ext_resource type="PackedScene" uid="uid://c6478qq7675c8" path="res://scenes/player_2.tscn" id="9_dmhic"]
 [ext_resource type="Script" uid="uid://k2fj0rk6oq44" path="res://scripts/evaluarCasillero.gd" id="11_qd15a"]
+[ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="12_glehf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15a0m"]
 texture = ExtResource("1_1fh1m")
@@ -292,6 +293,43 @@ _data = {
 }
 point_count = 6
 
+[sub_resource type="Animation" id="Animation_glehf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s18i8"]
+resource_name = "fade_out"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 1.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.12156863)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jcqdf"]
+_data = {
+&"RESET": SubResource("Animation_glehf"),
+&"fade_out": SubResource("Animation_s18i8")
+}
+
 [node name="tablero" type="Node2D" unique_id=621953954]
 script = ExtResource("1_afy4m")
 
@@ -326,3 +364,12 @@ position = Vector2(71, 436)
 
 [node name="evaluaCasilleros" type="Node" parent="." unique_id=1981707521]
 script = ExtResource("11_qd15a")
+
+[node name="transicion" type="Sprite2D" parent="." unique_id=106703961]
+position = Vector2(573, 105)
+scale = Vector2(1.2770834, 1)
+texture = ExtResource("12_glehf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=1772841545]
+libraries/ = SubResource("AnimationLibrary_jcqdf")
+autoplay = &"fade_out"

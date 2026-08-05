@@ -81,7 +81,7 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rmbvt")
 text = "musica"
 
-[node name="btnPelis" type="Button" parent="." unique_id=1492633111]
+[node name="btnPelis2" type="Button" parent="." unique_id=1492633111]
 layout_mode = 0
 offset_left = 574.0
 offset_top = 103.0
@@ -178,7 +178,20 @@ theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_87sdh")
 text = "empezar partida"
 
+[node name="btnPelis" type="Button" parent="." unique_id=913278776]
+layout_mode = 0
+offset_left = 413.0
+offset_top = 104.0
+offset_right = 532.0
+offset_bottom = 135.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_hiks7")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rmbvt")
+text = "musica"
+
 [connection signal="pressed" from="btnMusica" to="." method="_on_btn_musica_pressed"]
-[connection signal="pressed" from="btnPelis" to="." method="_on_btn_pelis_pressed"]
+[connection signal="pressed" from="btnPelis2" to="." method="_on_btn_pelis_pressed"]
 [connection signal="pressed" from="seccionMusica/taylor" to="." method="_on_taylor_pressed"]
 [connection signal="pressed" from="btnEmpezar" to="." method="_on_btn_empezar_pressed"]
+[connection signal="pressed" from="btnPelis" to="." method="_on_btn_pelis_pressed"]

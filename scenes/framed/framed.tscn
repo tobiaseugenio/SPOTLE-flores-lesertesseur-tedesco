@@ -1,12 +1,50 @@
 [gd_scene format=3 uid="uid://bipow4srf3mie"]
 
 [ext_resource type="Script" uid="uid://br87ce8m5423" path="res://scripts/framed/framed.gd" id="1_maj06"]
+[ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="2_5tuw5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we1il"]
 bg_color = Color(0.118469216, 0.283576, 0.39316037, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mvvce"]
 bg_color = Color(0.92535293, 0.9253528, 0.9253529, 1)
+
+[sub_resource type="Animation" id="Animation_glehf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s18i8"]
+resource_name = "fade_out"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 1.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.12156863)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4n3f4"]
+_data = {
+&"RESET": SubResource("Animation_glehf"),
+&"fade_out": SubResource("Animation_s18i8")
+}
 
 [node name="Control" type="Control" unique_id=2049636436]
 layout_mode = 3
@@ -107,6 +145,15 @@ text = "5"
 [node name="Button6" type="Button" parent="ContenedorBotones" unique_id=437844545]
 layout_mode = 2
 text = "6"
+
+[node name="transicion" type="Sprite2D" parent="." unique_id=1372683904]
+position = Vector2(573, 105)
+scale = Vector2(1.2770834, 1)
+texture = ExtResource("2_5tuw5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=144939945]
+libraries/ = SubResource("AnimationLibrary_4n3f4")
+autoplay = &"fade_out"
 
 [connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]
 [connection signal="text_changed" from="LineEscribir" to="." method="_on_line_escribir_text_changed"]

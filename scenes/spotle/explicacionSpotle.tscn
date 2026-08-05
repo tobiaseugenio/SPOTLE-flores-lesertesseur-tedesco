@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_rlnfk"]
 [ext_resource type="FontFile" uid="uid://c1pcwpafxkumy" path="res://ui/fonts/Gotham-Light.otf" id="2_adifm"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="4_p3gaw"]
+[ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="5_fy5w7"]
 [ext_resource type="Script" uid="uid://h01jpltwlb2l" path="res://scripts/spotle/btn_volver.gd" id="5_trceq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3gaw"]
@@ -14,6 +15,42 @@ corner_detail = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5a47q"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_gmqpn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jyxnn"]
+resource_name = "fade out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.04, 0.97),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.003921569)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dmkcl"]
+_data = {
+&"RESET": SubResource("Animation_gmqpn"),
+&"fade out": SubResource("Animation_jyxnn")
+}
 
 [node name="explicacionSpotle" type="Control" unique_id=1101325741]
 layout_mode = 3
@@ -82,5 +119,14 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_trceq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_5a47q")
 text = "volver "
 script = ExtResource("5_trceq")
+
+[node name="transicion" type="Sprite2D" parent="." unique_id=98324070]
+position = Vector2(559, 391)
+scale = Vector2(1.1739583, 0.98828125)
+texture = ExtResource("5_fy5w7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=404400085]
+libraries/ = SubResource("AnimationLibrary_dmkcl")
+autoplay = &"RESET"
 
 [connection signal="pressed" from="btnVolver" to="btnVolver" method="_on_pressed"]

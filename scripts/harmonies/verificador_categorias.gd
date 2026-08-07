@@ -26,6 +26,8 @@ func verificarCategoria():
 	buscarCategoriaCorrecta(opcionesCorrectas)
 
 func buscarCategoriaCorrecta(opcionesCorrectas: Array):
+	print("verificar categorias -> buscarCategoriaCorrecta()")
+	var acierto = false
 	for categoria in categoriasActivas:
 		var opcionCategoriaActiva = categoria.opciones.duplicate()
 		opcionCategoriaActiva.sort()
@@ -34,14 +36,19 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 			print("buscarCategoriaCorrecta -> bien")
 			bloquearBotones()
 			opcionesElegidas.clear()
-			
-	if botonesDesabilitados():
-		print("victoria")
-	
-	return
+			acierto = true
+		
+	if acierto:
+		if botonesDesabilitados():
+			print("victoria")
+		return
+		
 	print("buscarCategoriaCorrecta -> mal")
 	cargarPartida.intentosRestantes -= 1
-
+	
+	if cargarPartida.intentosRestantes == 0:
+		print("derrota")
+	
 func bloquearBotones():
 	for boton in opcionesElegidas:
 		boton.disabled = true

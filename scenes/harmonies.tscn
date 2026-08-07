@@ -4,21 +4,45 @@
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_l3ncf"]
 [ext_resource type="FontFile" uid="uid://bly5ijtx5e7px" path="res://ui/fonts/GothamBold.ttf" id="2_m30mv"]
 [ext_resource type="Script" uid="uid://cy2a1lp5ca356" path="res://scripts/harmonies/conectar_botones.gd" id="2_nkepk"]
+[ext_resource type="FontFile" uid="uid://bcmeehudcqhkr" path="res://ui/fonts/GothamMedium.ttf" id="3_1r8tq"]
 [ext_resource type="Script" uid="uid://c2ukkd8m0vij2" path="res://scripts/harmonies/cargar_partida.gd" id="4_d05f5"]
 [ext_resource type="Script" uid="uid://bl8b52ktse2ya" path="res://scripts/harmonies/verificador_categorias.gd" id="5_on7rg"]
 [ext_resource type="Script" uid="uid://u1q0kgxjv3iv" path="res://scripts/harmonies/intentos_restantes.gd" id="6_eehc5"]
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="8_a6wvx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m30mv"]
-bg_color = Color(0.23, 0.1472, 0.19412, 1)
+bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a6wvx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfnc3"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_on7rg"]
-bg_color = Color(0.17, 0.17, 0.17, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5ep4"]
+bg_color = Color(0.015686275, 0.20784314, 0.07450981, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1r8tq"]
-bg_color = Color(0.35031372, 0.35031372, 0.3503137, 1)
+bg_color = Color(0.047058824, 0.38039216, 0.15686275, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bypbh"]
+bg_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic3d0"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnfix"]
+bg_color = Color(0.015051562, 0.20918483, 0.07267847, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_icr3t"]
+bg_color = Color(0.047058824, 0.38039216, 0.15686275, 1)
 
 [sub_resource type="Animation" id="Animation_glehf"]
 length = 0.001
@@ -77,10 +101,12 @@ columns = 4
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -88,10 +114,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -99,10 +127,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -110,10 +140,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -121,10 +153,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -132,10 +166,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -143,10 +179,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -154,10 +192,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -165,10 +205,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -176,10 +218,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -187,10 +231,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -198,10 +244,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -209,10 +257,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -220,10 +270,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -231,10 +283,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -242,10 +296,12 @@ text = "Texto de ejemplo"
 custom_minimum_size = Vector2(150, 100)
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_styles/normal = SubResource("StyleBoxFlat_a6wvx")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_on7rg")
+theme_override_colors/font_pressed_color = Color(0.76240367, 0.7624037, 0.7624035, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_lfnc3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j5ep4")
 theme_override_styles/hover = SubResource("StyleBoxFlat_1r8tq")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_bypbh")
 toggle_mode = true
 text = "Texto de ejemplo"
 
@@ -257,6 +313,7 @@ offset_bottom = 567.0
 
 [node name="textoIntentosRestantes" type="Label" parent="HBoxContainer" unique_id=1994670812]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
 theme_override_fonts/font = ExtResource("2_l3ncf")
 text = "Intentos Restantes: "
 horizontal_alignment = 1
@@ -264,6 +321,7 @@ vertical_alignment = 1
 
 [node name="intentosRestantes" type="Label" parent="HBoxContainer" unique_id=473136835]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
 theme_override_fonts/font = ExtResource("2_m30mv")
 text = "prueba"
 horizontal_alignment = 1
@@ -275,6 +333,7 @@ offset_top = -24.0
 offset_right = 848.0
 offset_bottom = 132.0
 size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
 theme_override_fonts/font = ExtResource("2_l3ncf")
 text = "Encontrá 4 cuadrados que compartan la misma categoría
 
@@ -290,6 +349,11 @@ offset_right = 658.0
 offset_bottom = 634.0333
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("3_1r8tq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ic3d0")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xnfix")
+theme_override_styles/hover = SubResource("StyleBoxFlat_icr3t")
 text = "VERIFICAR"
 
 [node name="VerificadorEstadoBotones" type="Node" parent="." unique_id=1830057386]
@@ -308,6 +372,7 @@ script = ExtResource("5_on7rg")
 script = ExtResource("6_eehc5")
 
 [node name="transicion" type="Sprite2D" parent="." unique_id=669399966]
+visible = false
 position = Vector2(573, 105)
 scale = Vector2(1.2770834, 1)
 texture = ExtResource("8_a6wvx")

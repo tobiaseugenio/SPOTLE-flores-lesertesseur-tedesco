@@ -372,7 +372,6 @@ script = ExtResource("5_on7rg")
 script = ExtResource("6_eehc5")
 
 [node name="transicion" type="Sprite2D" parent="." unique_id=669399966]
-visible = false
 position = Vector2(573, 105)
 scale = Vector2(1.2770834, 1)
 texture = ExtResource("8_a6wvx")

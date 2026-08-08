@@ -40,14 +40,20 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 		
 	if acierto:
 		if botonesDesabilitados():
-			print("victoria")
+			GestorJuego.ganoElJuego = true
+			get_parent().juegoTerminado.emit(true)
+			await get_tree().create_timer(1.5).timeout
+			get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 		return
 		
 	print("buscarCategoriaCorrecta -> mal")
 	cargarPartida.intentosRestantes -= 1
 	
 	if cargarPartida.intentosRestantes == 0:
-		print("derrota")
+		GestorJuego.ganoElJuego = false
+		get_parent().juegoTerminado.emit(false)
+		await get_tree().create_timer(1.5).timeout
+		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 	
 func bloquearBotones():
 	for boton in opcionesElegidas:

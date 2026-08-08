@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://rkhgyehpt8ot"]
 
 [ext_resource type="Script" uid="uid://iobyx830vk6g" path="res://scripts/harmonies/verificador_estado_botones.gd" id="1_22aiq"]
+[ext_resource type="Script" uid="uid://sfdw3p15auni" path="res://scripts/harmonies.gd" id="1_ic3d0"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_l3ncf"]
 [ext_resource type="FontFile" uid="uid://bly5ijtx5e7px" path="res://ui/fonts/GothamBold.ttf" id="2_m30mv"]
 [ext_resource type="Script" uid="uid://cy2a1lp5ca356" path="res://scripts/harmonies/conectar_botones.gd" id="2_nkepk"]
@@ -82,6 +83,7 @@ _data = {
 }
 
 [node name="Harmonies" type="Node2D" unique_id=436709089]
+script = ExtResource("1_ic3d0")
 
 [node name="Panel" type="Panel" parent="." unique_id=1948859159]
 offset_right = 1131.0

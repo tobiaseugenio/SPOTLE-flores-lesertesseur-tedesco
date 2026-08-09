@@ -147,13 +147,22 @@ layout_mode = 2
 text = "6"
 
 [node name="transicion" type="Sprite2D" parent="." unique_id=1372683904]
-position = Vector2(573, 105)
+position = Vector2(1845, 68)
 scale = Vector2(1.2770834, 1)
 texture = ExtResource("2_5tuw5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=144939945]
 libraries/ = SubResource("AnimationLibrary_4n3f4")
 autoplay = &"fade_out"
+
+[node name="Resultado" type="Label" parent="." unique_id=1586140868]
+visible = false
+layout_mode = 0
+offset_left = 468.0
+offset_top = 555.0
+offset_right = 610.0
+offset_bottom = 619.0
+theme_override_font_sizes/font_size = 46
 
 [connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]
 [connection signal="text_changed" from="LineEscribir" to="." method="_on_line_escribir_text_changed"]

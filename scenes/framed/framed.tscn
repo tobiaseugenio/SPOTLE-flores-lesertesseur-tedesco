@@ -147,7 +147,7 @@ layout_mode = 2
 text = "6"
 
 [node name="transicion" type="Sprite2D" parent="." unique_id=1372683904]
-position = Vector2(1845, 68)
+position = Vector2(571, 147)
 scale = Vector2(1.2770834, 1)
 texture = ExtResource("2_5tuw5")
 

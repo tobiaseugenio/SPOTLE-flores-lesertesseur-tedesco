@@ -52,7 +52,11 @@ func revelar_siguiente():
 	else:
 		juego_terminado(false)
 
+var juego_activo := true
+
 func validar_respuesta(texto: String):
+	if not juego_activo:
+		return
 	var intento = texto.strip_edges().to_lower()
 	if intento in item_actual["alternativas"]:
 		juego_terminado(true)
@@ -60,10 +64,22 @@ func validar_respuesta(texto: String):
 		revelar_siguiente()
 
 func juego_terminado(gano: bool):
+	juego_activo = false
+	$LineEscribir.editable = false
+	$ItemList.visible = false 
+
+	$Resultado.visible = true
+	if gano:
+		$Resultado.text = "CORRECTO"
+		$Resultado.add_theme_color_override("font_color", Color.GREEN)
+		
+	else:
+		$Resultado.text = "DERROTA"
+		$Resultado.add_theme_color_override("font_color", Color.RED)
+
 	GestorJuego.ganoElJuego = gano
 	juegoTerminado.emit(gano)
-	if gano:
-		await get_tree().create_timer(3.0).timeout
+	await get_tree().create_timer(1.5).timeout
 	get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 
 func actualizar_sugerencias(texto: String):

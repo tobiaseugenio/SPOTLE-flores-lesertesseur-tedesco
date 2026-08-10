@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://ssec4cjvk5t" path="res://scripts/framed/menu.gd" id="1_wx8ly"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_wx8ly"]
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="4_8t60v"]
+[ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="5_mkrrm"]
+[ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="6_xwo3f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8t60v"]
 bg_color = Color(0.11764706, 0.28235295, 0.39215687, 1)
@@ -145,5 +147,15 @@ texture = ExtResource("4_8t60v")
 libraries/ = SubResource("AnimationLibrary_8t60v")
 autoplay = &"fade_out"
 
+[node name="aceptar" type="AudioStreamPlayer" parent="." unique_id=107723375]
+stream = ExtResource("5_mkrrm")
+volume_db = 11.0
+
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=32386714]
+stream = ExtResource("6_xwo3f")
+volume_db = 11.0
+
+[connection signal="mouse_entered" from="VideoclipsButton" to="." method="_on_videoclips_button_mouse_entered"]
 [connection signal="pressed" from="VideoclipsButton" to="." method="_on_videoclips_boton_pressed"]
+[connection signal="mouse_entered" from="PelisButton" to="." method="_on_pelis_button_mouse_entered"]
 [connection signal="pressed" from="PelisButton" to="." method="_on_pelis_boton_pressed"]

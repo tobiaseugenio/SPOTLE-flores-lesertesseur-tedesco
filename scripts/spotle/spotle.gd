@@ -55,7 +55,9 @@ func _on_item_list_item_selected(index: int) -> void:
 	var nombre = lista.get_item_text(index)
 	
 	if nombre == artistaSecreto["nombre"]:
+		$ganasteCartel.scale = Vector2.ZERO
 		$ganasteCartel.show()
+		create_tween().tween_property($ganasteCartel, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 		GestorJuego.ganoElJuego = true
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 		juegoTerminado.emit(true)
@@ -89,7 +91,7 @@ func _on_item_list_item_selected(index: int) -> void:
 	
 	if intentos >= intentosMaximos:
 		$perdisteCartel.show()
-		$perdisteCartel.mostrarNombreSecreto(nombre)
+		$perdisteCartel.mostrarNombreSecreto(artistaSecreto["nombre"])
 		await get_tree().create_timer(2.0).timeout
 		GestorJuego.ganoElJuego = false
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")

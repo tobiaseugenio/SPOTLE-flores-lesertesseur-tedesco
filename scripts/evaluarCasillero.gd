@@ -5,7 +5,11 @@ func evaluar(tipo: String, tablero: Node2D):
 		var rutas = ["res://scenes/spotle/spotle.tscn", "res://scenes/framed/framed.tscn", "res://scenes/harmonies.tscn" ]
 		var minijuego = load(rutas.pick_random()).instantiate()
 		minijuego.juegoTerminado.connect(tablero._on_perdiste_malo)
-		tablero.add_child(minijuego)
+		
+		var layer = CanvasLayer.new()
+		tablero.add_child(layer)
+		layer.add_child(minijuego)
+		
 	elif "Estrella" in tipo:
 		if tipo == "spotleEstrella":
 			GestorJuego.intentosExtra = 3

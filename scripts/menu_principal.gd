@@ -5,11 +5,14 @@ extends Control
 func _ready() -> void:
 	pass # Replace with function body.
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
-
 func _on_button_start_pressed() -> void:
+	$aceptar.play()
+	await $aceptar.finished 
 	get_tree().change_scene_to_file("res://scenes/explicacionMuvie.tscn")
+
+func _on_button_start_mouse_entered() -> void:
+	$hover.play()

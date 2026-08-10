@@ -12,4 +12,10 @@ func _process(delta: float) -> void:
 
 
 func _on_button_pressed() -> void:
+	$aceptar.play()
+	await $aceptar.finished
 	get_tree().change_scene_to_file("res://scenes/elegir_personaje.tscn")
+
+
+func _on_button_mouse_entered() -> void:
+	$hover.play()

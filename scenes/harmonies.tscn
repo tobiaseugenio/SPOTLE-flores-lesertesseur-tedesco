@@ -10,6 +10,8 @@
 [ext_resource type="Script" uid="uid://bl8b52ktse2ya" path="res://scripts/harmonies/verificador_categorias.gd" id="5_on7rg"]
 [ext_resource type="Script" uid="uid://u1q0kgxjv3iv" path="res://scripts/harmonies/intentos_restantes.gd" id="6_eehc5"]
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="8_a6wvx"]
+[ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="11_lfnc3"]
+[ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="12_j5ep4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m30mv"]
 bg_color = Color(0, 0, 0, 1)
@@ -381,3 +383,14 @@ texture = ExtResource("8_a6wvx")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=1132214205]
 libraries/ = SubResource("AnimationLibrary_a6wvx")
 autoplay = &"fade_out"
+
+[node name="aceptar" type="AudioStreamPlayer" parent="." unique_id=1093315108]
+stream = ExtResource("11_lfnc3")
+volume_db = 11.0
+
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=1018716006]
+stream = ExtResource("12_j5ep4")
+volume_db = 11.0
+
+[connection signal="mouse_entered" from="verificar" to="." method="_on_verificar_mouse_entered"]
+[connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]

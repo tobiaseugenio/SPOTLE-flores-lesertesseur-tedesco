@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://c7rjfbvglws4k" path="res://ui/personajes/taxidriverG-disabled.png" id="12_7jqsm"]
 [ext_resource type="Texture2D" uid="uid://b6kao2fn0nldr" path="res://ui/personajes/killbillG-disabled.png" id="14_xfkyv"]
 [ext_resource type="Texture2D" uid="uid://dogc78rn857f8" path="res://ui/personajes/jokerG-disabled.png" id="16_ku46y"]
+[ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="17_x21uv"]
+[ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="18_7jqsm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6tgq"]
 bg_color = Color(0, 0, 0, 1)
@@ -190,8 +192,17 @@ theme_override_font_sizes/font_size = 21
 theme_override_styles/pressed = SubResource("StyleBoxFlat_rmbvt")
 text = "musica"
 
+[node name="aceptar" type="AudioStreamPlayer" parent="." unique_id=916273515]
+stream = ExtResource("17_x21uv")
+volume_db = 11.0
+
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=1154652830]
+stream = ExtResource("18_7jqsm")
+volume_db = 11.0
+
 [connection signal="pressed" from="btnMusica" to="." method="_on_btn_musica_pressed"]
 [connection signal="pressed" from="btnPelis2" to="." method="_on_btn_pelis_pressed"]
 [connection signal="pressed" from="seccionMusica/taylor" to="." method="_on_taylor_pressed"]
+[connection signal="mouse_entered" from="btnEmpezar" to="." method="_on_btn_empezar_mouse_entered"]
 [connection signal="pressed" from="btnEmpezar" to="." method="_on_btn_empezar_pressed"]
 [connection signal="pressed" from="btnPelis" to="." method="_on_btn_pelis_pressed"]

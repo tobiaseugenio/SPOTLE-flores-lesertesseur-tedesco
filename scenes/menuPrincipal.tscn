@@ -4,6 +4,8 @@
 [ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="1_haamj"]
 [ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="2_7moql"]
 [ext_resource type="Texture2D" uid="uid://c4hc22lv5kcro" path="res://ui/assets/muvie.png" id="4_oveco"]
+[ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="5_57jiv"]
+[ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="6_duatf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rom4x"]
 bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
@@ -76,4 +78,13 @@ position = Vector2(782, 174.99998)
 scale = Vector2(1.015015, 1.0973333)
 texture = ExtResource("4_oveco")
 
+[node name="aceptar" type="AudioStreamPlayer" parent="." unique_id=1425191500]
+stream = ExtResource("5_57jiv")
+volume_db = 11.0
+
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=1486940452]
+stream = ExtResource("6_duatf")
+volume_db = 11.0
+
+[connection signal="mouse_entered" from="ButtonStart" to="." method="_on_button_start_mouse_entered"]
 [connection signal="pressed" from="ButtonStart" to="." method="_on_button_start_pressed"]

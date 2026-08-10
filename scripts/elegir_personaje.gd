@@ -17,10 +17,12 @@ func _ready():
 			
 	
 func _on_btn_musica_pressed():
+	$aceptar.play()
 	seccionMusica.show()
 	seccionPelis.hide()
 	
 func _on_btn_pelis_pressed():
+	$aceptar.play()
 	seccionPelis.show()
 	seccionMusica.hide()
 	
@@ -31,13 +33,22 @@ func seleccionarAvatar(botonPulsado: TextureButton):
 	if jugadorEligiendo == 1:
 		GestorJuego.texturaP1 = rutaChica
 		botonPulsado.disabled = true
+		$aceptar.play()
 		titulo.text = "Jugador 2: Elija su avatar"
 		jugadorEligiendo = 2
+		
 	else:
 		GestorJuego.texturaP2 = rutaChica
 		botonPulsado.disabled = true
 		titulo.text = "Listo! Estan listos para empezar?"
+		$aceptar.play()
 		btnEmpezar.show()
 		
 func _on_btn_empezar_pressed():
+	$aceptar.play()
+	await $aceptar.finished
 	get_tree().change_scene_to_file("res://scenes/tablero.tscn")
+
+func _on_btn_empezar_mouse_entered() -> void:
+	$hover.play()
+	

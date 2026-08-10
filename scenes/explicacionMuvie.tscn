@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://nye10mgob3v8" path="res://ui/assets/aguantescorsese.png" id="4_jyxnn"]
 [ext_resource type="FontFile" uid="uid://bcmeehudcqhkr" path="res://ui/fonts/GothamMedium.ttf" id="5_2esov"]
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="6_wkaif"]
+[ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="7_jyxnn"]
+[ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="8_2esov"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3gaw"]
 bg_color = Color(0, 0, 0, 1)
@@ -152,4 +154,13 @@ texture = ExtResource("6_wkaif")
 libraries/ = SubResource("AnimationLibrary_wkaif")
 autoplay = &"fade_out"
 
+[node name="aceptar" type="AudioStreamPlayer" parent="." unique_id=869850373]
+stream = ExtResource("7_jyxnn")
+volume_db = 11.0
+
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=2096762681]
+stream = ExtResource("8_2esov")
+volume_db = 11.0
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

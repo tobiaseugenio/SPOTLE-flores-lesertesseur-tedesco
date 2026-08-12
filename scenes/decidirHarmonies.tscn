@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://cjcry6x2wf0at"]
+
+[ext_resource type="Script" uid="uid://iymmymqvetpr" path="res://scripts/harmonies/decidirHarmonies.gd" id="1_7lfrb"]
+[ext_resource type="FontFile" uid="uid://buk5h8ju7cuha" path="res://ui/fonts/Gotham-Black.otf" id="2_wlpf7"]
+[ext_resource type="FontFile" uid="uid://l51kmrhpscdq" path="res://ui/fonts/GothamBook.ttf" id="3_wg3ns"]
+[ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="4_r85yf"]
+[ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="5_wg3ns"]
+[ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="6_r85yf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdnaf"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ba4u"]
+bg_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_64o72"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_glehf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_s18i8"]
+resource_name = "fade_out"
+length = 1.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 1.02),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.12156863)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0m7g6"]
+_data = {
+&"RESET": SubResource("Animation_glehf"),
+&"fade_out": SubResource("Animation_s18i8")
+}
+
+[node name="Control" type="Control" unique_id=1428376711]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7lfrb")
+
+[node name="Panel" type="Panel" parent="." unique_id=1950461890]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tdnaf")
+
+[node name="Label" type="Label" parent="." unique_id=1301088271]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 226.0
+offset_right = 1117.0
+offset_bottom = 338.0
+theme_override_colors/font_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("2_wlpf7")
+theme_override_font_sizes/font_size = 100
+text = "HARMONIES"
+horizontal_alignment = 1
+
+[node name="btnMusica" type="Button" parent="." unique_id=378249586]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -208.0
+offset_top = 20.0
+offset_right = -15.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("3_wg3ns")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ba4u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_64o72")
+text = "música"
+
+[node name="btnPelis" type="Button" parent="." unique_id=1845912077]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 11.0
+offset_top = 20.0
+offset_right = 204.0
+offset_bottom = 64.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.11764706, 0.84313726, 0.3764706, 1)
+theme_override_fonts/font = ExtResource("3_wg3ns")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_3ba4u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_64o72")
+text = "peliculas"
+
+[node name="transicion" type="Sprite2D" parent="." unique_id=882277416]
+position = Vector2(573, 105)
+scale = Vector2(1.2770834, 1)
+texture = ExtResource("4_r85yf")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=29125731]
+libraries/ = SubResource("AnimationLibrary_0m7g6")
+autoplay = &"fade_out"
+
+[node name="aceptar" type="AudioStreamPlayer" parent="." unique_id=977810695]
+stream = ExtResource("5_wg3ns")
+volume_db = 11.0
+
+[node name="hover" type="AudioStreamPlayer" parent="." unique_id=204774380]
+stream = ExtResource("6_r85yf")
+volume_db = 11.0
+
+[connection signal="pressed" from="btnMusica" to="." method="_on_btn_musica_pressed"]
+[connection signal="button_down" from="btnPelis" to="." method="_on_btn_pelis_button_down"]

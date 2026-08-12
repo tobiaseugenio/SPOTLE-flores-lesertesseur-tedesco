@@ -1,0 +1,37 @@
+extends Control
+signal juegoTerminado(gano: bool)
+
+func _ready() -> void:
+	pass
+
+func _on_btn_musica_pressed() -> void:
+	$aceptar.play()
+	ModoJuego.modo = "musica"
+	var juego = preload("res://scenes/harmonies.tscn").instantiate()
+	juego.juegoTerminado.connect(_on_juego_terminado_recibido)
+	add_child(juego)
+
+func _on_btn_pelis_pressed() -> void:
+	$aceptar.play()
+	ModoJuego.modo = "pelis"
+	var juego = preload("res://scenes/harmonies.tscn").instantiate()
+	juego.juegoTerminado.connect(_on_juego_terminado_recibido)
+	add_child(juego)
+
+func _on_como_jugar_pressed() -> void:
+	$aceptar.play()
+	await $aceptar.finished
+	get_tree().change_scene_to_file("res://scenes/harmonies/explicacionHarmonies.tscn")
+
+func _on_juego_terminado_recibido(gano: bool):
+	juegoTerminado.emit(gano)
+	queue_free()
+
+func _on_btn_musica_mouse_entered() -> void:
+	$hover.play()
+
+func _on_btn_pelis_mouse_entered() -> void:
+	$hover.play()
+
+func _on_como_jugar_mouse_entered() -> void:
+	$hover.play()

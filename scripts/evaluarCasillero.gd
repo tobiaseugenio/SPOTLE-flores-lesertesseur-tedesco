@@ -19,13 +19,13 @@ func evaluar(tipo: String, tablero: Node2D):
 			get_tree().change_scene_to_file("res://scenes/framed/menu.tscn")
 		if tipo == "harmoniesEstrella":
 			GestorJuego.intentosExtra = 1
-			get_tree().change_scene_to_file("res://scenes/harmonies.tscn")
+			get_tree().change_scene_to_file("res://scenes/decidirHarmonies.tscn")
 	elif tipo == "spotle":
 		get_tree().change_scene_to_file("res://scenes/spotle/decidirSpotle.tscn")
 	elif tipo == "framed":
 		get_tree().change_scene_to_file("res://scenes/framed/menu.tscn")
 	elif tipo == "harmonies":
-		get_tree().change_scene_to_file("res://scenes/harmonies.tscn")
+		get_tree().change_scene_to_file("res://scenes/decidirHarmonies.tscn")
 	elif tipo == "fin":
 		get_tree().change_scene_to_file("res://scenes/ganasteFin.tscn")
 		

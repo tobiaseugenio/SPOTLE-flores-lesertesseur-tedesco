@@ -51,7 +51,7 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 	cargarPartida.intentosRestantes -= 1
 	
 	if cargarPartida.intentosRestantes == 0:
-		$perdiste.play()
+		$"../perdiste".play()
 		GestorJuego.ganoElJuego = false
 		get_parent().juegoTerminado.emit(false)
 		await get_tree().create_timer(1.5).timeout

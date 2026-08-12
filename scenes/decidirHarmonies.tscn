@@ -144,4 +144,4 @@ stream = ExtResource("6_r85yf")
 volume_db = 11.0
 
 [connection signal="pressed" from="btnMusica" to="." method="_on_btn_musica_pressed"]
-[connection signal="button_down" from="btnPelis" to="." method="_on_btn_pelis_button_down"]
+[connection signal="pressed" from="btnPelis" to="." method="_on_btn_pelis_pressed"]

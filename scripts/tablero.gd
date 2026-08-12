@@ -9,6 +9,7 @@ var turnoP1: bool = true
 var turnoP2: bool = false
 var turnosJugados: int = 0
 var pathActivo 
+var pasoCasillero: float = 0.0
 
 const CASILLEROS = [ 
 	"normal", "spotle", "framedEstrella", "harmonies", "spotle", "framed", "spotle", "harmonies", "framedEstrella", 
@@ -38,10 +39,12 @@ func _ready():
 		GestorJuego.turnosRestantes = 3
 	GestorJuego.ganoElJuego = false 
 	
+	pasoCasillero = pathFollow_p1.get_parent().curve.get_baked_length() / float(CASILLEROS.size() - 1)
+	
 	$dado.dado_tirado.connect(_on_dado_dado_tirado)
 	casilleroActual = GestorJuego.posicionP1 if turnoP1 else GestorJuego.posicionP2
-	pathFollow_p1.progress = GestorJuego.posicionP1 * TAM_CASILLERO
-	pathFollow_p2.progress = GestorJuego.posicionP2 * TAM_CASILLERO
+	pathFollow_p1.progress = GestorJuego.posicionP1 * pasoCasillero
+	pathFollow_p2.progress = GestorJuego.posicionP2 * pasoCasillero
 
 func _on_dado_dado_tirado(resultado: int):
 	print("el dado sacó un: ", resultado)
@@ -49,8 +52,7 @@ func _on_dado_dado_tirado(resultado: int):
 	
 func moverJugador(num: int):
 	casilleroAnterior = casilleroActual
-	casilleroActual = min(casilleroActual + num, 32)
-	var distanciaPxs = num * (TAM_CASILLERO)
+	casilleroActual = min(casilleroActual + num, CASILLEROS.size() - 1)
 	
 	if turnoP1:
 		GestorJuego.posicionP1 = casilleroActual
@@ -58,7 +60,7 @@ func moverJugador(num: int):
 		GestorJuego.posicionP2 = casilleroActual
 	
 	var pathActivo = pathFollow_p1 if turnoP1 else pathFollow_p2
-	var destino = pathActivo.progress + distanciaPxs
+	var destino = casilleroActual * pasoCasillero
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_SINE)
 	tween.set_ease(Tween.EASE_IN_OUT)
@@ -71,7 +73,7 @@ func moverJugador(num: int):
 func _on_perdiste_malo(gano: bool):
 	if !gano:
 		casilleroActual = casilleroAnterior
-		var destino = casilleroActual * TAM_CASILLERO
+		var destino = casilleroActual * pasoCasillero
 		var pathActivo = pathFollow_p1 if turnoP1 else pathFollow_p2
 		
 		var tween = create_tween()

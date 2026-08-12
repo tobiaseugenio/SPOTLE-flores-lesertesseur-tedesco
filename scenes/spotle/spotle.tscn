@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c5ye571v6r5vy" path="res://scenes/ganasteCartel.tscn" id="4_tu6e5"]
 [ext_resource type="PackedScene" uid="uid://fokhqbwh2k8u" path="res://scenes/perdisteCartel.tscn" id="5_gakhy"]
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="6_vduvp"]
+[ext_resource type="AudioStream" uid="uid://bjuid6xt4q643" path="res://ui/sfx/different-wrong-buzzer.mp3" id="7_8ps1h"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cr3o2"]
 bg_color = Color(0.92535293, 0.9253528, 0.9253529, 1)
@@ -139,6 +140,7 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="transicion" type="Sprite2D" parent="." unique_id=708865059]
+visible = false
 position = Vector2(573, 105)
 scale = Vector2(1.2770834, 1)
 texture = ExtResource("6_vduvp")
@@ -146,6 +148,9 @@ texture = ExtResource("6_vduvp")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="transicion" unique_id=1051129440]
 libraries/ = SubResource("AnimationLibrary_vduvp")
 autoplay = &"fade_out"
+
+[node name="perdiste" type="AudioStreamPlayer" parent="." unique_id=1127738919]
+stream = ExtResource("7_8ps1h")
 
 [connection signal="text_changed" from="VBoxContainer/LineEdit" to="." method="_on_line_edit_text_changed"]
 [connection signal="item_selected" from="VBoxContainer/ItemList" to="." method="_on_item_list_item_selected"]

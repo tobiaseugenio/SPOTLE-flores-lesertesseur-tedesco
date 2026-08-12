@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://i51r5sri25h2" path="res://ui/assets/dado.png" id="1_nntwd"]
 [ext_resource type="Script" uid="uid://dhdfhd8a65057" path="res://scripts/dado.gd" id="1_tbv0i"]
+[ext_resource type="AudioStream" uid="uid://byun305e17ap5" path="res://ui/sfx/dado.mp3" id="3_uvwln"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tbv0i"]
 size = Vector2(40, 38)
@@ -32,5 +33,8 @@ texture = ExtResource("1_nntwd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=603281959]
 shape = SubResource("RectangleShape2D_tbv0i")
+
+[node name="dado" type="AudioStreamPlayer" parent="." unique_id=1100706146]
+stream = ExtResource("3_uvwln")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -57,7 +57,12 @@ func _on_item_list_item_selected(index: int) -> void:
 	if nombre == artistaSecreto["nombre"]:
 		$ganasteCartel.scale = Vector2.ZERO
 		$ganasteCartel.show()
-		create_tween().tween_property($ganasteCartel, "scale", Vector2.ONE, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($ganasteCartel, "scale", Vector2.ONE, 0.25)
+
 		GestorJuego.ganoElJuego = true
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 		juegoTerminado.emit(true)
@@ -71,7 +76,7 @@ func _on_item_list_item_selected(index: int) -> void:
 		return
 	artistasIntentados.append(nombre)
 	intentos += 1
-	$VBoxContainer/labelIntentos.text = str(intentos) + " de 10 intentos"
+	$VBoxContainer/labelIntentos.text = str(intentos) + " de " + str(intentosMaximos) + " intentos"
 	
 	var datosArtista = {}
 	
@@ -90,10 +95,19 @@ func _on_item_list_item_selected(index: int) -> void:
 	lista.hide()
 	
 	if intentos >= intentosMaximos:
+		$perdiste.play()
+		$perdisteCartel.scale = Vector2.ZERO
 		$perdisteCartel.show()
 		$perdisteCartel.mostrarNombreSecreto(artistaSecreto["nombre"])
-		await get_tree().create_timer(2.0).timeout
+		
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($perdisteCartel, "scale", Vector2.ONE, 0.25)
+
 		GestorJuego.ganoElJuego = false
+		await $perdiste.finished
+		await get_tree().create_timer(1.0).timeout
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 		juegoTerminado.emit(false)
 		queue_free()

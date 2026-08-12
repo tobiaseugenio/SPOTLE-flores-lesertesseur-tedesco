@@ -47,13 +47,26 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 		return
 		
 	print("buscarCategoriaCorrecta -> mal")
+	sacudirBotonVerificar()
 	cargarPartida.intentosRestantes -= 1
 	
 	if cargarPartida.intentosRestantes == 0:
+		$perdiste.play()
 		GestorJuego.ganoElJuego = false
 		get_parent().juegoTerminado.emit(false)
 		await get_tree().create_timer(1.5).timeout
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
+
+func sacudirBotonVerificar():
+	var origen = botonVerificar.position
+	var tween = create_tween()
+	tween.set_trans(Tween.TRANS_SINE)
+	tween.set_ease(Tween.EASE_OUT)
+	tween.tween_property(botonVerificar, "position", origen + Vector2(10, 0), 0.04)
+	tween.tween_property(botonVerificar, "position", origen + Vector2(-10, 0), 0.04)
+	tween.tween_property(botonVerificar, "position", origen + Vector2(7, 0), 0.03)
+	tween.tween_property(botonVerificar, "position", origen + Vector2(-7, 0), 0.03)
+	tween.tween_property(botonVerificar, "position", origen, 0.03)
 	
 func bloquearBotones():
 	for boton in opcionesElegidas:

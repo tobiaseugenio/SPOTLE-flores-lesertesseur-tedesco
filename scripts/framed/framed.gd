@@ -74,6 +74,7 @@ func juego_terminado(gano: bool):
 		$Resultado.add_theme_color_override("font_color", Color.GREEN)
 		
 	else:
+		$perdiste.play()
 		$Resultado.text = "DERROTA"
 		$Resultado.add_theme_color_override("font_color", Color.RED)
 

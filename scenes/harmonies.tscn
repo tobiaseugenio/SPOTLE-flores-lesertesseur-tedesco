@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="8_a6wvx"]
 [ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="11_lfnc3"]
 [ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="12_j5ep4"]
+[ext_resource type="AudioStream" uid="uid://bjuid6xt4q643" path="res://ui/sfx/different-wrong-buzzer.mp3" id="13_bypbh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m30mv"]
 bg_color = Color(0, 0, 0, 1)
@@ -391,6 +392,9 @@ volume_db = 11.0
 [node name="hover" type="AudioStreamPlayer" parent="." unique_id=1018716006]
 stream = ExtResource("12_j5ep4")
 volume_db = 11.0
+
+[node name="perdiste" type="AudioStreamPlayer" parent="." unique_id=1018890640]
+stream = ExtResource("13_bypbh")
 
 [connection signal="mouse_entered" from="verificar" to="." method="_on_verificar_mouse_entered"]
 [connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://br87ce8m5423" path="res://scripts/framed/framed.gd" id="1_maj06"]
 [ext_resource type="Texture2D" uid="uid://dq3l55iw7wgau" path="res://fotos/Black_colour.jpg" id="2_5tuw5"]
+[ext_resource type="AudioStream" uid="uid://bjuid6xt4q643" path="res://ui/sfx/different-wrong-buzzer.mp3" id="3_4n3f4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_we1il"]
 bg_color = Color(0.118469216, 0.283576, 0.39316037, 1)
@@ -163,6 +164,9 @@ offset_top = 555.0
 offset_right = 610.0
 offset_bottom = 619.0
 theme_override_font_sizes/font_size = 46
+
+[node name="perdiste" type="AudioStreamPlayer" parent="." unique_id=75068542]
+stream = ExtResource("3_4n3f4")
 
 [connection signal="item_selected" from="ItemList" to="." method="_on_item_list_item_selected"]
 [connection signal="text_changed" from="LineEscribir" to="." method="_on_line_escribir_text_changed"]

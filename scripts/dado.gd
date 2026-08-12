@@ -19,13 +19,14 @@ func _on_input_event(viewport, event, shape_idx):
 
 func tirarDado():
 	dadoFueTirado = true
+	$dado.play()
 	var numRandom = randi_range(1, 6)
 
 	var tween = create_tween()
 	tween.set_trans(Tween.TRANS_CUBIC)
 	tween.set_ease(Tween.EASE_OUT)
 	tween.tween_property(spriteDado, "rotation_degrees", spriteDado.rotation_degrees + 720.0, 0.3)
-	tween.parallel().tween_property(spriteDado, "scale", Vector2(0.35, 0.35), 0.15)
+	tween.parallel().tween_property(spriteDado, "scale", Vector2(0.95, 0.95), 0.15)
 	tween.tween_property(spriteDado, "scale", Vector2.ONE, 0.15)
 	await tween.finished
 	

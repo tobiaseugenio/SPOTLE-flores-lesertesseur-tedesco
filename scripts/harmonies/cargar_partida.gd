@@ -24,6 +24,6 @@ func cargarPartida():
 		
 	opcionesMezcladas.shuffle()
 	
-	for i in range(botones.size()):
+	for i in range(min(botones.size(), opcionesMezcladas.size())):
 		if botones[i] is Button:
 			botones[i].text = opcionesMezcladas[i]

@@ -18,6 +18,8 @@ func _ready():
 			items = Videoclips.get_all()
 
 	items.shuffle()
+	$ganasteCartel.hide()
+	$perdisteCartel.hide()
 	nueva_partida()
 
 func _on_boton_frame_pressed(indice: int):
@@ -58,7 +60,7 @@ func validar_respuesta(texto: String):
 	if not juego_activo:
 		return
 	var intento = texto.strip_edges().to_lower()
-	if intento in item_actual["alternativas"]:
+	if intento in item_actual["alternativas"] or intento == item_actual["titulo"].to_lower():
 		juego_terminado(true)
 	else:
 		revelar_siguiente()
@@ -66,21 +68,32 @@ func validar_respuesta(texto: String):
 func juego_terminado(gano: bool):
 	juego_activo = false
 	$LineEscribir.editable = false
-	$ItemList.visible = false 
-
-	$Resultado.visible = true
-	if gano:
-		$Resultado.text = "CORRECTO"
-		$Resultado.add_theme_color_override("font_color", Color.GREEN)
-		
-	else:
-		$perdiste.play()
-		$Resultado.text = "DERROTA"
-		$Resultado.add_theme_color_override("font_color", Color.RED)
+	$ItemList.visible = false
 
 	GestorJuego.ganoElJuego = gano
 	juegoTerminado.emit(gano)
-	await get_tree().create_timer(1.5).timeout
+
+	if gano:
+		$ganasteCartel.scale = Vector2.ZERO
+		$ganasteCartel.show()
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($ganasteCartel, "scale", Vector2.ONE, 0.25)
+	else:
+		$perdiste.play()
+		$perdisteCartel.scale = Vector2.ZERO
+		$perdisteCartel.show()
+		var info = item_actual["titulo"]
+		if item_actual.has("artista"):
+			info += " - " + item_actual["artista"]
+		$perdisteCartel.mostrarNombreSecreto(info)
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($perdisteCartel, "scale", Vector2.ONE, 0.25)
+
+	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 
 func actualizar_sugerencias(texto: String):

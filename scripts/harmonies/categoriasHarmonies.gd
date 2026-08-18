@@ -9,7 +9,7 @@ const CATEGORIAS_HARMONIES=[
 	},
 	{
 		"nombre": "Canciones de Madonna",
-		"opciones": ["Vouge", "Holiday", "Hung Up", "4 Minutes"],
+		"opciones": ["Vogue", "Holiday", "Hung Up", "4 Minutes"],
 		"categoria": "musica"
 	},
 	{
@@ -48,6 +48,61 @@ const CATEGORIAS_HARMONIES=[
 		"categoria": "musica"
 	},
 	{
+		"nombre": "Canciones de Eminem",
+		"opciones": ["Lose Yourself", "Stan", "Without Me", "Slim Shady"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Lady Gaga",
+		"opciones": ["Bad Romance", "Poker Face", "Just Dance", "Shallow"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Adele",
+		"opciones": ["Rolling in the Deep", "Someone Like You", "Hello", "Easy On Me"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Beyonce",
+		"opciones": ["Crazy in Love", "Halo", "Single Ladies", "Formation"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Taylor Swift",
+		"opciones": ["Shake It Off", "Love Story", "Blank Space", "Anti-Hero"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Rihanna",
+		"opciones": ["Umbrella", "We Found Love", "Diamonds", "Work"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Bruno Mars",
+		"opciones": ["Just The Way You Are", "Grenade", "Uptown Funk", "That's What I Like"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Katy Perry",
+		"opciones": ["Roar", "Firework", "Teenage Dream", "Dark Horse"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Ed Sheeran",
+		"opciones": ["Shape of You", "Thinking Out Loud", "Photograph", "Perfect"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Canciones de Ariana Grande",
+		"opciones": ["Thank U Next", "7 Rings", "Break Free", "God Is a Woman"],
+		"categoria": "musica"
+	},
+	{
+		"nombre": "Generos musicales",
+		"opciones": ["Pop", "Rock", "Jazz", "Hip-Hop"],
+		"categoria": "musica"
+	},
+	{
 		"nombre": "Peliculas de Martin Scorsese",
 		"opciones": ["Goodfellas", "Taxi Driver", "The Departed", "The Wolf of Wall Street"],
 		"categoria": "peliculas"
@@ -75,6 +130,56 @@ const CATEGORIAS_HARMONIES=[
 	{
 		"nombre": "Peliculas de Tim Burton",
 		"opciones": ["Edward Scissorhands", "Beetlejuice", "Batman", "Big Eyes"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de Steven Spielberg",
+		"opciones": ["Jaws", "E.T.", "Schindler's List", "Indiana Jones"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de Marvel",
+		"opciones": ["Iron Man", "Black Panther", "Avengers", "Spider-Man"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de terror clasicas",
+		"opciones": ["Halloween", "A Nightmare on Elm Street", "The Shining", "Psycho"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de ciencia ficcion",
+		"opciones": ["The Matrix", "Blade Runner", "2001: A Space Odyssey", "Alien"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de animacion de Disney",
+		"opciones": ["The Lion King", "Beauty and the Beast", "Aladdin", "Mulan"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de Quentin Tarantino",
+		"opciones": ["Pulp Fiction", "Inglourious Basterds", "Kill Bill", "Django Unchained"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de James Bond",
+		"opciones": ["GoldenEye", "Casino Royale", "Skyfall", "No Time to Die"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de los 80s",
+		"opciones": ["Back to the Future", "The Breakfast Club", "Top Gun", "Ghostbusters"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas romanticas famosas",
+		"opciones": ["Titanic", "Notting Hill", "Pretty Woman", "The Notebook"],
+		"categoria": "peliculas"
+	},
+	{
+		"nombre": "Peliculas de Wes Anderson",
+		"opciones": ["The Grand Budapest Hotel", "Rushmore", "The Royal Tenenbaums", "Moonrise Kingdom"],
 		"categoria": "peliculas"
 	}
 ]

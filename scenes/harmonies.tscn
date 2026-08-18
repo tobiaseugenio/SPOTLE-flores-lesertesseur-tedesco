@@ -13,6 +13,8 @@
 [ext_resource type="AudioStream" uid="uid://v5e2h1xvq02w" path="res://ui/sfx/aceptar.MP3" id="11_lfnc3"]
 [ext_resource type="AudioStream" uid="uid://n8dqkib5ji3x" path="res://ui/sfx/hover.MP3" id="12_j5ep4"]
 [ext_resource type="AudioStream" uid="uid://bjuid6xt4q643" path="res://ui/sfx/different-wrong-buzzer.mp3" id="13_bypbh"]
+[ext_resource type="PackedScene" uid="uid://c5ye571v6r5vy" path="res://scenes/ganasteCartel.tscn" id="14_xnfix"]
+[ext_resource type="PackedScene" uid="uid://fokhqbwh2k8u" path="res://scenes/perdisteCartel.tscn" id="15_gwn14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m30mv"]
 bg_color = Color(0, 0, 0, 1)
@@ -395,6 +397,23 @@ volume_db = 11.0
 
 [node name="perdiste" type="AudioStreamPlayer" parent="." unique_id=1018890640]
 stream = ExtResource("13_bypbh")
+
+[node name="ganasteCartel" parent="." unique_id=1868593379 instance=ExtResource("14_xnfix")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 530.0
+offset_top = 332.0
+offset_right = 530.0
+offset_bottom = 332.0
+
+[node name="perdisteCartel" parent="." unique_id=725645899 instance=ExtResource("15_gwn14")]
+offset_left = 558.0
+offset_top = 339.0
+offset_right = 558.0
+offset_bottom = 339.0
 
 [connection signal="mouse_entered" from="verificar" to="." method="_on_verificar_mouse_entered"]
 [connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]

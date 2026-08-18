@@ -9,6 +9,8 @@ extends Node
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	botonVerificar.pressed.connect(verificarCategoria)
+	get_parent().get_node("ganasteCartel").hide()
+	get_parent().get_node("perdisteCartel").hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -42,7 +44,14 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 		if botonesDesabilitados():
 			GestorJuego.ganoElJuego = true
 			get_parent().juegoTerminado.emit(true)
-			await get_tree().create_timer(1.5).timeout
+			var cartel = get_parent().get_node("ganasteCartel")
+			cartel.scale = Vector2.ZERO
+			cartel.show()
+			var tween = create_tween()
+			tween.set_trans(Tween.TRANS_BACK)
+			tween.set_ease(Tween.EASE_OUT)
+			tween.tween_property(cartel, "scale", Vector2.ONE, 0.25)
+			await get_tree().create_timer(2.0).timeout
 			get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 		return
 		
@@ -54,7 +63,14 @@ func buscarCategoriaCorrecta(opcionesCorrectas: Array):
 		$"../perdiste".play()
 		GestorJuego.ganoElJuego = false
 		get_parent().juegoTerminado.emit(false)
-		await get_tree().create_timer(1.5).timeout
+		var cartel = get_parent().get_node("perdisteCartel")
+		cartel.scale = Vector2.ZERO
+		cartel.show()
+		var tween = create_tween()
+		tween.set_trans(Tween.TRANS_BACK)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property(cartel, "scale", Vector2.ONE, 0.25)
+		await get_tree().create_timer(2.0).timeout
 		get_tree().change_scene_to_file("res://scenes/tablero.tscn")
 
 func sacudirBotonVerificar():
